@@ -279,11 +279,20 @@ function initProjectsList() {
     });
   }
 
+  // Synchronize category counters dynamically
+  const labelMap = { all: "Все", telegram: "Telegram", android: "Android", desktop: "Desktop" };
   filterButtons.forEach((btn) => {
+    const filter = btn.getAttribute("data-filter");
+    const count = filter === "all"
+      ? PROJECTS_DATA.length
+      : PROJECTS_DATA.filter((p) => p.categoryId === filter).length;
+    if (labelMap[filter]) {
+      btn.textContent = `${labelMap[filter]} (${count})`;
+    }
+
     btn.addEventListener("click", () => {
       filterButtons.forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
-      const filter = btn.getAttribute("data-filter");
       render(filter);
     });
   });

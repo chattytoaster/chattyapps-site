@@ -53,6 +53,54 @@ const PROJECTS_DATA = [
     contactSubject: "Разработка мобильного приложения уровня SecondsYear"
   },
   {
+    id: "yttvaf",
+    title: "YouTube TV Mod (yttvaf)",
+    subtitle: "Модифицированный клиент YouTube для Android TV и Smart TV",
+    badge: "Android TV & Reverse Engineering",
+    category: "Android & TV",
+    categoryId: "android",
+    year: "2026",
+    status: "В продакшене",
+    icon: "assets/yttvaf-icon.png",
+    heroImage: "assets/yttvaf-dialog.png",
+    imageType: "png",
+    isPublicGithub: true,
+    githubUrl: "https://github.com/chattytoaster/yttvaf",
+    viewUrl: "yttvaf.html",
+    viewLabel: "Посмотреть",
+    summary: "Модифицированный клиент YouTube для Android TV на движке Cobalt с обходом замедлений через встроенный SOCKS5, SponsorBlock, AdBlock и веб-интерфейсом (:8888).",
+    description: "Комплексная модификация официального клиента YouTube для Android TV / Smart TV. Обеспечивает стабильное воспроизведение видео без необходимости устанавливать сторонние VPN на телевизор или настраивать роутер. Включает локальный SOCKS5-туннель, встроенный веб-интерфейс (:8888) для удобной настройки с телефона по Wi-Fi, нативное меню для пульта, SponsorBlock и AdBlock.",
+    problem: "В условиях нестабильного доступа к YouTube на Smart TV пользователи сталкиваются с постоянной буферизацией и падением качества. Установка тяжелых VPN-приложений на телевизоры неудобна из-за отсутствия мыши, перегрузки процессора и нестабильности соединений.",
+    solution: "Создана низкоуровневая модификация с локальным SOCKS5-петлевым туннелем (Local SOCKS loopback на порту 9876), прозрачно проксирующим сетевой стек Chromium/Cobalt и Cronet. Добавлен встроенный HTTP-сервер на порту 8888 для моментальной настройки со смартфона, экранные OSD-уведомления, нативное меню настроек на пульте, HTTPS-клиент SponsorBlock и AdBlock.",
+    features: [
+      "Встроенный SOCKS5 Прокси (Bypass Subsystem): поддержка socks5://user:pass@host:port с аутентификацией и локальным туннелем на порту 9876.",
+      "Локальный Web-интерфейс управления (:8888): встроенный HTTP-сервер для быстрой вставки параметров прокси и переключения категорий со смартфона в Wi-Fi сети.",
+      "Нативное меню настроек на ТВ: вызов с пульта кнопкой MENU, SETTINGS или красной клавишей для быстрой смены параметров без мыши.",
+      "Интеграция SponsorBlock: автоматический пропуск 8 категорий спонсорских сегментов, интро, аутро и саморекламы с экранным OSD-уведомлением.",
+      "Фиксация качества видео и скорости: принудительный выбор разрешения (Авто, 720p, 1080p FHD, 1440p 2K, 2160p 4K) и скорости воспроизведения (до 2.0x).",
+      "Встроенный AdBlock: очистка рекламных структур из API и автоматический пропуск коммерческих вставок с ускорением 16x.",
+      "Управление с пульта (Горячие клавиши): цветные кнопки для мгновенного переключения скорости, качества и SponsorBlock."
+    ],
+    techStack: [
+      { name: "Java & Smali", category: "Core" },
+      { name: "Chromium / Cobalt", category: "Engine" },
+      { name: "Cronet Hooks", category: "Network" },
+      { name: "SOCKS5 Tunnel", category: "Networking" },
+      { name: "NanoHTTPD", category: "Web Server" },
+      { name: "SponsorBlock API", category: "Integration" },
+      { name: "Leanback UI", category: "Android TV" }
+    ],
+    architecture: "Гибридная архитектура Java/Smali-хуков сетевого стека Cronet/Cobalt с инъекцией JavaScript в Chromium WebContentsImpl. Локальный SOCKS5 loopback-туннель для маршрутизации трафика и встроенный многопоточный HTTP-сервер для удаленного управления.",
+    metrics: [
+      { label: "Скорость настройки", value: "< 1 минуты" },
+      { label: "Поддержка 4K / 60fps", value: "100%" },
+      { label: "Категорий SponsorBlock", value: "8 типов" },
+      { label: "Сторонних VPN на ТВ", value: "0 (не нужны)" }
+    ],
+    telegramLink: "https://t.me/chtoaster",
+    contactSubject: "Разработка мобильных решений и модификаций Android"
+  },
+  {
     id: "antigravitytg",
     title: "AntigravityTG",
     subtitle: "Удаленный мобильный командный центр и терминал для ПК",

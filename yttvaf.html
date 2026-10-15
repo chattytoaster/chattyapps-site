@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube TV Mod (com.chatty.yttvaf) — ChattyApps Studio</title>
+  <meta name="description" content="Модифицированный клиент YouTube для Android TV / Smart TV со встроенным SOCKS5, SponsorBlock, AdBlock и веб-интерфейсом управления (:8888)." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/yttvaf-icon.png" type="image/png" />
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <header class="landing-nav-bar">
+      <div class="landing-nav-left">
+        <a href="index.html" class="landing-back-link" title="Вернуться в портфолио">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>ChattyApps Studio</span>
+        </a>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://github.com/chattytoaster/yttvaf" target="_blank" rel="noopener noreferrer" class="link-arrow" style="font-size: 0.84rem;">
+          <span>GitHub</span>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+
+        <button id="theme-toggle" class="theme-btn" aria-label="Сменить тему">
+          <svg class="sun-icon" viewBox="0 0 24 24">
+            <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24">
+            <path d="M12.3 2a10 10 0 0 0-1.9 20 10 10 0 0 0 9.7-7.6 1 1 0 0 0-1.2-1.2 8 8 0 1 1-7.8-12.4 1 1 0 0 0 1.2-1.2A10 10 0 0 0 12.3 2z"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="landing-hero">
+      <div class="landing-head">
+        <img src="assets/yttvaf-icon.png" alt="YouTube TV Mod" class="landing-app-icon" />
+        <div class="landing-title-wrap">
+          <div class="landing-meta-tags">
+            <span class="project-tag">Android TV</span>
+            <span class="project-tag">Smart TV</span>
+            <span class="project-tag">Open Source</span>
+            <span class="project-tag">2026</span>
+          </div>
+          <h1 class="landing-title">YouTube TV Mod</h1>
+        </div>
+      </div>
+
+      <p class="landing-lead">
+        Модифицированный клиент YouTube для Android TV на движке Chromium/Cobalt. Решает проблему стабильного воспроизведения без установки сторонних VPN на телевизор. Оснащен встроенным локальным SOCKS5-петлевым туннелем, Web-интерфейсом (:8888) для удобной настройки с телефона по Wi-Fi, нативным меню настроек для пульта, SponsorBlock и AdBlock.
+      </p>
+
+      <!-- Primary Action Buttons (Requested by user) -->
+      <div class="landing-actions">
+        <a href="https://github.com/chattytoaster/yttvaf" target="_blank" rel="noopener noreferrer" class="btn-primary-open">
+          <span>Открыть</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+
+        <a href="https://github.com/chattytoaster/yttvaf/releases/latest" target="_blank" rel="noopener noreferrer" class="btn-secondary-action">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Скачать APK</span>
+        </a>
+
+        <a href="https://github.com/chattytoaster/yttvaf" target="_blank" rel="noopener noreferrer" class="btn-secondary-action">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>Репозиторий</span>
+        </a>
+      </div>
+
+      <!-- Quick Metrics -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <span class="metric-val">&lt; 1 мин</span>
+          <span class="metric-lbl">Настройка по Wi-Fi</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-val">4K 60fps</span>
+          <span class="metric-lbl">Фиксация качества</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-val">8 типов</span>
+          <span class="metric-lbl">Категорий SponsorBlock</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-val">0 VPN</span>
+          <span class="metric-lbl">Не нужны сторонние сервисы</span>
+        </div>
+      </div>
+
+      <!-- Screenshot Showcase -->
+      <div class="landing-media-box">
+        <img src="assets/yttvaf-dialog.png" alt="Нативное меню настроек YouTube TV Mod на экране телевизора" loading="lazy" />
+        <div class="landing-media-caption">
+          <span>Нативное меню настроек на экране телевизора (вызов кнопкой MENU на пульте)</span>
+          <span>Android TV Leanback UI</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Ключевые возможности</h2>
+      </div>
+
+      <div>
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>⚡ Встроенный SOCKS5 Прокси (Bypass Subsystem)</span>
+          </div>
+          <p class="landing-feature-desc">
+            Поддержка защищенного протокола <code>socks5://user:pass@host:port</code> с аутентификацией. Приложение создает локальный петлевой туннель (Local SOCKS loopback на порту 9876), прозрачно маршрутизируя сетевой стек Chromium/Cobalt и системный Cronet. Позволяет смотреть YouTube в максимальном качестве без установки дополнительных VPN-клиентов на ТВ.
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>🌐 Локальный Web-интерфейс управления (:8888)</span>
+          </div>
+          <p class="landing-feature-desc">
+            Встроенный легковесный HTTP-сервер на порту 8888. При запуске на экране телевизора отображается OSD-уведомление с IP-адресом ТВ (например, <code>http://192.168.0.178:8888</code>). Вы можете открыть эту страницу на смартфоне или компьютере в той же Wi-Fi сети и в один клик вставить сложную строку прокси, переключить категории SponsorBlock и проверить статус туннеля.
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>⚙ Интерактивное меню настроек на ТВ</span>
+          </div>
+          <p class="landing-feature-desc">
+            Вызывается прямо с пульта телевизора кнопкой <strong>MENU</strong>, <strong>SETTINGS</strong>, <strong>GUIDE</strong> или <strong>Красной</strong> кнопкой. Нативный диалог позволяет изменять параметры воспроизведения, переключать категории и сбрасывать настройки без необходимости подключать клавиатуру или мышь.
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>⏩ SponsorBlock (Пропуск интеграций)</span>
+          </div>
+          <p class="landing-feature-desc">
+            Автоматический пропуск рекламы блогеров и нежелательных пауз на базе базы данных SponsorBlock. На выбор доступны 8 категорий: спонсорские вставки, самореклама, интерактив (призывы подписаться/поставить лайк), интро, аутро, превью/тизеры, филлеры и немузыкальные части в клипах. Экранный OSD-баннер уведомляет о пропуске с указанием сэкономленного времени.
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>📺 Фиксация качества и скорости</span>
+          </div>
+          <p class="landing-feature-desc">
+            Возможность зафиксировать предпочтительное разрешение (Авто, 720p, 1080p FHD, 1440p 2K, 2160p 4K) и скорость видео (1.0x, 1.25x, 1.5x, 1.75x, 2.0x). Модификация предотвращает автоматическое падение битрейта и динамически адаптирует плеер.
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>🛡 Встроенный AdBlock</span>
+          </div>
+          <p class="landing-feature-desc">
+            Очистка рекламных структур (adPlacements, adSlots, playerAds) из ответов API YouTube, подавление баннеров и автоматический пропуск рекламных вставок с ускорением до 16x и автокликом по кнопкам «Пропустить».
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Remote Hotkeys -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Управление с пульта</h2>
+      </div>
+
+      <div class="landing-table-wrap">
+        <table class="landing-table">
+          <thead>
+            <tr>
+              <th style="width: 35%;">Кнопка пульта</th>
+              <th>Действие в приложении</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="kbd-tag">MENU</span> / <span class="kbd-tag">SETTINGS</span> / <span class="kbd-tag">GUIDE</span></td>
+              <td>Открыть нативное меню настроек YouTube TV Mod</td>
+            </tr>
+            <tr>
+              <td><span class="kbd-tag" style="border-left: 3px solid #ef4444;">КРАСНАЯ</span></td>
+              <td>Открыть экран настроек и меню категорий</td>
+            </tr>
+            <tr>
+              <td><span class="kbd-tag" style="border-left: 3px solid #22c55e;">ЗЕЛЁНАЯ</span></td>
+              <td>Циклическое переключение скорости: <code>1.0x</code> → <code>1.25x</code> → <code>1.5x</code> → <code>1.75x</code> → <code>2.0x</code></td>
+            </tr>
+            <tr>
+              <td><span class="kbd-tag" style="border-left: 3px solid #eab308;">ЖЁЛТАЯ</span></td>
+              <td>Быстрое включение / выключение SponsorBlock</td>
+            </tr>
+            <tr>
+              <td><span class="kbd-tag" style="border-left: 3px solid #3b82f6;">СИНЯЯ</span></td>
+              <td>Циклическое переключение качества: <code>Авто</code> → <code>1080p</code> → <code>1440p</code> → <code>2160p (4K)</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Architecture & Stack -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Архитектура и стек</h2>
+      </div>
+
+      <div class="contact-box" style="margin-bottom: 24px;">
+        <p class="drawer-text" style="margin-bottom: 14px;">
+          Модификация построена на гибридной связке низкоуровневых байткод-патчей (Smali), хуков сетевого стека Android/Cronet и инъекции JavaScript в нативный движок Chromium/Cobalt через <code>WebContentsImpl</code>. Встроенный сервер на базе многопоточного NanoHTTPD обслуживает локальный Web UI и REST API.
+        </p>
+
+        <div class="drawer-stack">
+          <span class="stack-pill">Java & Smali</span>
+          <span class="stack-pill">Chromium / Cobalt Engine</span>
+          <span class="stack-pill">Cronet ProxyChangeListener</span>
+          <span class="stack-pill">SOCKS5 Protocol</span>
+          <span class="stack-pill">NanoHTTPD Web Server</span>
+          <span class="stack-pill">SponsorBlock REST API</span>
+          <span class="stack-pill">JavaScript Injection</span>
+          <span class="stack-pill">Android TV Leanback</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Start -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Быстрый запуск</h2>
+      </div>
+
+      <div class="steps-list">
+        <div class="step-card">
+          <span class="step-num">1</span>
+          <div class="step-content">
+            <span class="step-title">Скачайте актуальный APK</span>
+            <span class="step-desc">Перейдите на страницу релизов проекта и сохраните последний собранный файл <code>MODIFIED_FILE.apk</code>.</span>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <span class="step-num">2</span>
+          <div class="step-content">
+            <span class="step-title">Установите на Smart TV</span>
+            <span class="step-desc">Скопируйте APK на USB-флешку, отправьте через утилиту Send Files to TV или установите командой <code>adb install</code>.</span>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <span class="step-num">3</span>
+          <div class="step-content">
+            <span class="step-title">Настройте в 1 клик с телефона</span>
+            <span class="step-desc">При запуске откройте отображенный на экране адрес <code>http://&lt;IP_ТВ&gt;:8888</code> на телефоне и вставьте вашу строку прокси.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="landing-actions" style="margin-top: 32px;">
+        <a href="https://github.com/chattytoaster/yttvaf" target="_blank" rel="noopener noreferrer" class="btn-primary-open">
+          <span>Открыть на GitHub</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+
+        <a href="https://github.com/chattytoaster/yttvaf/releases/latest" target="_blank" rel="noopener noreferrer" class="btn-secondary-action">
+          <span>Скачать APK-файл</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+
+        <a href="index.html" class="btn-secondary-action">
+          <span>← Назад в портфолио</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div>
+        <span>© 2026 ChattyApps. Все права защищены.</span>
+      </div>
+      <div>
+        <a href="https://t.me/chtoaster" target="_blank" rel="noopener noreferrer" class="link-arrow">
+          <span>Связаться: @chtoaster</span>
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
