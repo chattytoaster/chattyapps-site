@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChattyApps Studio — Разработка Telegram-ботов, Android-приложений и Автоматизации</title>
+  
+  <meta name="description" content="Портфолио студии разработки ChattyApps. Нативные приложения для Android (Jetpack Compose), интеллектуальные Telegram-боты, Mini Apps, десктопные утилиты и интеграция AI." />
+  <meta name="keywords" content="ChattyApps, разработка ботов, Telegram Mini App, Android разработка, Jetpack Compose, автоматизация бизнеса, Python, Kotlin, Antigravity, SecondsYear" />
+  <meta name="author" content="ChattyApps Studio" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ChattyApps Studio — Портфолио цифровых решений" />
+  <meta property="og:description" content="Создаем Telegram-ботов, Android-приложения, десктопный софт и AI-агентов. Ознакомьтесь с нашими флагманскими проектами." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/logo.svg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Background Canvas for Neural/Star Constellation -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-glow glow-top-left"></div>
+  <div class="ambient-glow glow-bottom-right"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" aria-label="ChattyApps Studio Главная">
+        <div class="brand-icon">
+          <img src="assets/logo.svg" alt="ChattyApps Studio Logo" width="38" height="38" />
+        </div>
+        <span class="brand-name">Chatty<span class="gradient-cyan">Apps</span></span>
+        <span class="brand-tag">STUDIO</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#projects" class="nav-link">Проекты</a></li>
+          <li><a href="#services" class="nav-link">Услуги & Стек</a></li>
+          <li><a href="#calculator" class="nav-link">Калькулятор</a></li>
+          <li><a href="#workflow" class="nav-link">Процесс</a></li>
+          <li><a href="#contact" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Переключить тему оформления">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20">
+            <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20">
+            <path d="M12.3 2a10 10 0 0 0-1.9 20 10 10 0 0 0 9.7-7.6 1 1 0 0 0-1.2-1.2 8 8 0 1 1-7.8-12.4 1 1 0 0 0 1.2-1.2A10 10 0 0 0 12.3 2z"/>
+          </svg>
+        </button>
+
+        <a href="https://t.me/chtoaster" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 10px 18px; font-size: 0.88rem;">
+          <span>Связаться</span>
+        </a>
+
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Открыть меню">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <div class="section-badge">
+          <span class="pulse-dot"></span>
+          <span>Full-Stack & Mobile Engineering Studio</span>
+        </div>
+        <h1 class="hero-title">
+          Создаем цифровые продукты, <span class="gradient-text">Telegram-ботов</span> и мобильные экосистемы
+        </h1>
+        <p class="hero-description">
+          Студия <strong>ChattyApps</strong> проектирует и запускает надежные технологические решения: от нативных приложений на Jetpack Compose и AI-агентов нового поколения до систем онлайн-бронирования и десктопной автоматизации для бизнеса.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn btn-primary">
+            <span>Смотреть проекты</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#calculator" class="btn btn-secondary">
+            <span>Рассчитать проект</span>
+          </a>
+          <a href="https://t.me/chtoaster" target="_blank" rel="noopener noreferrer" class="btn btn-glow">
+            <span>Telegram: @chtoaster</span>
+          </a>
+        </div>
+
+        <div class="hero-stats-grid">
+          <div class="stat-item">
+            <span class="stat-value gradient-cyan">6+</span>
+            <span class="stat-label">Проектов в продакшене</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value gradient-purple">100%</span>
+            <span class="stat-label">Асинхронный стек</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" style="color: var(--accent-emerald);">99.9%</span>
+            <span class="stat-label">Отказоустойчивость</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" style="color: var(--accent-amber);">>10x</span>
+            <span class="stat-label">Ускорение процессов</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Terminal Card -->
+      <div class="hero-visual">
+        <div class="hero-card-stack">
+          <div class="hero-card-header">
+            <div class="card-dots">
+              <span class="card-dot dot-red"></span>
+              <span class="card-dot dot-yellow"></span>
+              <span class="card-dot dot-green"></span>
+            </div>
+            <div class="terminal-title">chattyapps-stack.py</div>
+          </div>
+          <div class="terminal-body">
+            <div class="code-line"><span class="code-comment"># ChattyApps Core Technology Ecosystem</span></div>
+            <div class="code-line"><span class="code-keyword">from</span> chattyapps <span class="code-keyword">import</span> Studio, Ecosystem</div>
+            <div class="code-line">&nbsp;</div>
+            <div class="code-line">stack = {</div>
+            <div class="code-line">&nbsp;&nbsp;<span class="code-string">"mobile"</span>: [<span class="code-string">"Android"</span>, <span class="code-string">"Jetpack Compose"</span>, <span class="code-string">"Media3"</span>],</div>
+            <div class="code-line">&nbsp;&nbsp;<span class="code-string">"telegram"</span>: [<span class="code-string">"Aiogram 3"</span>, <span class="code-string">"Mini Apps"</span>, <span class="code-string">"FSM"</span>],</div>
+            <div class="code-line">&nbsp;&nbsp;<span class="code-string">"desktop"</span>: [<span class="code-string">"PyQt6"</span>, <span class="code-string">"Tesseract OCR"</span>, <span class="code-string">"WinShell"</span>],</div>
+            <div class="code-line">&nbsp;&nbsp;<span class="code-string">"ai_core"</span>: [<span class="code-string">"Antigravity CLI"</span>, <span class="code-string">"Gemini 3.8"</span>, <span class="code-string">"Claude"</span>]</div>
+            <div class="code-line">}</div>
+            <div class="code-line">&nbsp;</div>
+            <div class="code-line"><span class="code-func">launch_solution</span>(quality=<span class="code-var">100</span>, offline_capable=<span class="code-keyword">True</span>)</div>
+          </div>
+        </div>
+
+        <div class="hero-badge-float">
+          <div class="float-icon">✓</div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.92rem;">Seconds Year & Antigravity</div>
+            <div style="font-size: 0.76rem; color: var(--text-muted);">Проверенные архитектурные решения</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Showcase Section -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <span class="pulse-dot"></span>
+          <span>Портфолио проектов</span>
+        </div>
+        <h2 class="section-title">Наши реализованные кейсы</h2>
+        <p class="section-subtitle">
+          Реальные цифровые продукты студии: нативные мобильные приложения, продвинутые Telegram-боты, утилиты автоматизации бизнеса и AI-мосты.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">Все проекты (6)</button>
+        <button class="filter-tab" data-filter="telegram">Telegram & Mini Apps (4)</button>
+        <button class="filter-tab" data-filter="android">Android & Мобильные (1)</button>
+        <button class="filter-tab" data-filter="desktop">Desktop & Автоматизация (1)</button>
+      </div>
+
+      <!-- Dynamic Projects Grid -->
+      <div class="projects-grid" id="projects-grid">
+        <!-- Rendered by script.js using projects-data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Services & Competencies Section -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <span class="pulse-dot"></span>
+          <span>Компетенции студии</span>
+        </div>
+        <h2 class="section-title">Что мы создаем для клиентов</h2>
+        <p class="section-subtitle">
+          Полный цикл разработки — от проектирования архитектуры и UI/UX до развертывания на серверах и публикации в магазинах приложений.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-icon-box">🤖</div>
+          <h3 class="service-title">Telegram-боты & Mini Apps</h3>
+          <p class="service-description">
+            Полнофункциональные боты на Aiogram 3 с интерактивными веб-интерфейсами (Telegram Mini Apps), базами данных и сценариями любой сложности.
+          </p>
+          <ul class="service-list">
+            <li>Веб-витрины и каталоги товаров</li>
+            <li>Интеграция с платежными шлюзами</li>
+            <li>Двусторонняя синхронизация с CRM и Google</li>
+            <li>Умные очереди и защита от перегрузок</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-icon-box">📱</div>
+          <h3 class="service-title">Android-приложения (Compose)</h3>
+          <p class="service-description">
+            Нативная разработка под Android на современном стеке Kotlin + Jetpack Compose. Высочайшая производительность, плавная анимация и работа с мультимедиа.
+          </p>
+          <ul class="service-list">
+            <li>Кастомная работа с камерой (CameraX)</li>
+            <li>Аппаратный монтаж и обработка видео (Media3)</li>
+            <li>Полная автономность и работа без интернета</li>
+            <li>Адаптивный дизайн Material You / Material 3</li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-icon-box">💻</div>
+          <h3 class="service-title">Desktop-утилиты & Автоматизация</h3>
+          <p class="service-description">
+            Разработка прикладного программного обеспечения под Windows для оптимизации документооборота, извлечения данных и устранения рутины.
+          </p>
+          <ul class="service-list">
+            <li>Оптическое распознавание текста (Tesseract OCR)</li>
+            <li>Парсинг PDF, 1С, банковских выписок</li>
+            <li>Интеграция с контекстным меню Проводника (ПКМ)</li>
+            <li>Фоновые агенты в системном трее</li>
+          </ul>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service-icon-box">🧠</div>
+          <h3 class="service-title">AI-интеграции & Cloud API</h3>
+          <p class="service-description">
+            Внедрение языковых моделей (Gemini, Claude, GPT) в бизнес-процессы, удаленные командные центры (Google Antigravity) и высокоскоростные REST API серверы.
+          </p>
+          <ul class="service-list">
+            <li>Интеграция LLM-агентов для анализа данных</li>
+            <li>Асинхронные бэкенды на Python (aiohttp, FastAPI)</li>
+            <li>Серверы лицензирования и биллинга</li>
+            <li>Безопасная архитектура с защитой данных</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Project Cost Calculator -->
+  <section class="calculator-section" id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <span class="pulse-dot"></span>
+          <span>Интерактивный расчет</span>
+        </div>
+        <h2 class="section-title">Калькулятор стоимости проекта</h2>
+        <p class="section-subtitle">
+          Выберите базовую платформу, требуемые модули и сроки, чтобы моментально получить предварительную вилку бюджета и ориентировочные сроки реализации.
+        </p>
+      </div>
+
+      <div class="calculator-card">
+        <!-- Configuration Controls -->
+        <div class="calc-controls">
+          <!-- Step 1 -->
+          <div class="calc-step">
+            <div class="calc-step-title">
+              <span class="calc-step-number">1</span>
+              <span>Выберите платформу проекта</span>
+            </div>
+            <div class="calc-options-grid">
+              <button type="button" class="calc-option-btn calc-platform-btn selected" data-platform="bot">
+                <span class="calc-option-name">🤖 Telegram-бот</span>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">от 35 000 ₽</span>
+              </button>
+              <button type="button" class="calc-option-btn calc-platform-btn" data-platform="miniapp">
+                <span class="calc-option-name">🌐 Telegram Mini App</span>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">от 60 000 ₽</span>
+              </button>
+              <button type="button" class="calc-option-btn calc-platform-btn" data-platform="android">
+                <span class="calc-option-name">📱 Android-приложение</span>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">от 95 000 ₽</span>
+              </button>
+              <button type="button" class="calc-option-btn calc-platform-btn" data-platform="desktop">
+                <span class="calc-option-name">💻 Desktop Windows утилита</span>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">от 45 000 ₽</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="calc-step">
+            <div class="calc-step-title">
+              <span class="calc-step-number">2</span>
+              <span>Дополнительные модули и интеграции</span>
+            </div>
+            <div class="calc-checkbox-grid">
+              <label class="calc-checkbox-label">
+                <input type="checkbox" class="calc-feature-check" value="ai" />
+                <span>🧠 AI / LLM интеграция</span>
+              </label>
+              <label class="calc-checkbox-label">
+                <input type="checkbox" class="calc-feature-check" value="payments" />
+                <span>💳 Эквайринг и платежи</span>
+              </label>
+              <label class="calc-checkbox-label">
+                <input type="checkbox" class="calc-feature-check" value="crm" />
+                <span>📅 Google Calendar & CRM</span>
+              </label>
+              <label class="calc-checkbox-label">
+                <input type="checkbox" class="calc-feature-check" value="admin" />
+                <span>📊 Админ-панель и статистика</span>
+              </label>
+              <label class="calc-checkbox-label">
+                <input type="checkbox" class="calc-feature-check" value="ocr" />
+                <span>🔍 Компьютерное зрение / OCR</span>
+              </label>
+              <label class="calc-checkbox-label">
+                <input type="checkbox" class="calc-feature-check" value="api" />
+                <span>☁️ Выделенный REST API сервер</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="calc-step">
+            <div class="calc-step-title">
+              <span class="calc-step-number">3</span>
+              <span>Срочность реализации</span>
+            </div>
+            <div style="display: flex; gap: 20px;">
+              <label style="display: flex; align-items: center; gap: 8px; font-size: 0.94rem; cursor: pointer;">
+                <input type="radio" name="calc-urgency" value="standard" checked style="accent-color: var(--accent-cyan);" />
+                <span>Стандартные сроки</span>
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; font-size: 0.94rem; cursor: pointer;">
+                <input type="radio" name="calc-urgency" value="urgent" style="accent-color: var(--accent-cyan);" />
+                <span>Срочный запуск (+35%)</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real-Time Estimate Summary -->
+        <div class="calc-summary-box">
+          <div>
+            <h3 class="summary-title">Предварительный расчет</h3>
+            <div class="summary-row">
+              <span class="summary-row-label">Платформа:</span>
+              <span class="summary-row-value" id="calc-summary-platform">Telegram-бот</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-row-label">Выбранные модули:</span>
+              <span class="summary-row-value" id="calc-summary-features" style="text-align: right; max-width: 240px; font-size: 0.88rem;">Базовый набор</span>
+            </div>
+
+            <div class="summary-price-container">
+              <div class="summary-price-label">Ориентировочный бюджет</div>
+              <div class="summary-price-value" id="calc-summary-price">от 35 000 ₽</div>
+              <div class="summary-timeline" id="calc-summary-timeline">Ориентировочный срок: ~7 рабочих дней</div>
+            </div>
+          </div>
+
+          <div class="calc-actions">
+            <button type="button" class="btn btn-primary" id="calc-send-tg" style="width: 100%;">
+              <span>Обсудить бриф в Telegram</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+            <button type="button" class="btn btn-secondary" id="calc-copy-brief" style="width: 100%;">
+              <span>Скопировать спецификацию</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Development Workflow Section -->
+  <section class="workflow-section" id="workflow">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <span class="pulse-dot"></span>
+          <span>Прозрачный процесс</span>
+        </div>
+        <h2 class="section-title">Как мы работаем над проектами</h2>
+        <p class="section-subtitle">
+          Четкая этапность без скрытых платежей: вы всегда знаете, на каком этапе находится разработка и что будет получено в результате.
+        </p>
+      </div>
+
+      <div class="workflow-steps">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <h3 class="step-title">Анализ & ТЗ</h3>
+          <p class="step-desc">
+            Детально изучаем бизнес-задачу, прорабатываем пользовательские сценарии и формируем согласованное техническое задание.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <h3 class="step-title">Прототип & Архитектура</h3>
+          <p class="step-desc">
+            Проектируем схему базы данных, интерфейс (UI/UX) и архитектурный каркас для максимальной скорости и расширяемости.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <h3 class="step-title">Разработка</h3>
+          <p class="step-desc">
+            Пишем чистый, типизированный асинхронный код с непрерывной демонстрацией промежуточных результатов в тестовом окружении.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">04</div>
+          <h3 class="step-title">Тестирование</h3>
+          <p class="step-desc">
+            Проверяем граничные условия, нагрузочную устойчивость, работу при плохой связи и корректность обработки ошибок.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">05</div>
+          <h3 class="step-title">Деплой & Гарантия</h3>
+          <p class="step-desc">
+            Развертываем решение на сервере, настраиваем автозапуск через Systemd, передаем документацию и обеспечиваем техподдержку.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & CTA Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <div class="section-badge" style="margin-bottom: 12px;">
+            <span class="pulse-dot"></span>
+            <span>Прямой контакт</span>
+          </div>
+          <h2 class="contact-info-title">Готовы обсудить ваш проект?</h2>
+          <p class="contact-info-desc">
+            Напишите нам напрямую в Telegram для быстрой оценки задачи или заполните форму, и мы свяжемся с вами в течение 30 минут.
+          </p>
+
+          <div class="contact-methods">
+            <a href="https://t.me/chtoaster" target="_blank" rel="noopener noreferrer" class="contact-method-item">
+              <div class="contact-method-icon">💬</div>
+              <div class="contact-method-meta">
+                <span class="contact-method-label">Telegram основателя</span>
+                <span class="contact-method-val">@chtoaster</span>
+              </div>
+            </a>
+
+            <a href="https://t.me/chattyappsbot" target="_blank" rel="noopener noreferrer" class="contact-method-item">
+              <div class="contact-method-icon">🤖</div>
+              <div class="contact-method-meta">
+                <span class="contact-method-label">Официальный бот студии</span>
+                <span class="contact-method-val">@chattyappsbot</span>
+              </div>
+            </a>
+
+            <div class="contact-method-item">
+              <div class="contact-method-icon">⏱</div>
+              <div class="contact-method-meta">
+                <span class="contact-method-label">График связи</span>
+                <span class="contact-method-val">Ежедневно 09:00 — 22:00 (МСК)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label for="form-name" class="form-label">Ваше имя *</label>
+            <input type="text" id="form-name" class="form-input" placeholder="Например, Александр" required />
+          </div>
+
+          <div class="form-group">
+            <label for="form-contact" class="form-label">Telegram или телефон *</label>
+            <input type="text" id="form-contact" class="form-input" placeholder="@username или +7 (999) 000-00-00" required />
+          </div>
+
+          <div class="form-group">
+            <label for="form-type" class="form-label">Тип интересующей разработки</label>
+            <select id="form-type" class="form-select">
+              <option value="Telegram-бот">Telegram-бот под ключ</option>
+              <option value="Telegram Mini App">Telegram Mini App (WebApp)</option>
+              <option value="Android-приложение">Нативное Android-приложение</option>
+              <option value="Desktop-утилита Windows">Desktop-утилита Windows / Автоматизация</option>
+              <option value="AI / LLM интеграция">Интеграция AI / Нейросетей</option>
+              <option value="Комплексная экосистема">Комплексная экосистема под ключ</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="form-message" class="form-label">Краткое описание задачи</label>
+            <textarea id="form-message" class="form-textarea" placeholder="Расскажите в двух словах о вашей идее или функционале..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="padding: 16px; font-size: 1.05rem;">
+            <span>Отправить заявку в Telegram</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep-Dive Project Modal Overlay -->
+  <div class="modal-overlay" id="project-modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-badge" id="modal-project-badge">КАТЕГОРИЯ</span>
+          <h2 class="modal-title" id="modal-project-title">Название проекта</h2>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Закрыть модальное окно">✕</button>
+      </div>
+      <div class="modal-body" id="modal-dynamic-content">
+        <!-- Injected dynamically via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 8px;">
+            <div class="brand-icon" style="width: 32px; height: 32px;">
+              <img src="assets/logo.svg" alt="ChattyApps Logo" width="32" height="32" />
+            </div>
+            <span class="brand-name">Chatty<span class="gradient-cyan">Apps</span></span>
+          </div>
+          <p class="footer-brand-desc">
+            Проектирование и создание масштабируемых программных решений: Telegram-боты, Android-приложения, Windows-автоматизация и AI-агенты.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Проекты</h4>
+          <ul class="footer-links">
+            <li><a href="#projects" class="footer-link">SecondsYear (Android)</a></li>
+            <li><a href="#projects" class="footer-link">AntigravityTG (AI Bridge)</a></li>
+            <li><a href="#projects" class="footer-link">CheckRename (Desktop)</a></li>
+            <li><a href="#projects" class="footer-link">VOZDUH (Booking MiniApp)</a></li>
+            <li><a href="#projects" class="footer-link">BeautyBot (Online CRM)</a></li>
+            <li><a href="#projects" class="footer-link">ChattyApps Studio Bot</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Навигация</h4>
+          <ul class="footer-links">
+            <li><a href="#projects" class="footer-link">Кейсы студии</a></li>
+            <li><a href="#services" class="footer-link">Услуги и технологии</a></li>
+            <li><a href="#calculator" class="footer-link">Калькулятор проекта</a></li>
+            <li><a href="#workflow" class="footer-link">Этапы работы</a></li>
+            <li><a href="#contact" class="footer-link">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Связь</h4>
+          <ul class="footer-links">
+            <li><a href="https://t.me/chtoaster" target="_blank" rel="noopener noreferrer" class="footer-link">Telegram: @chtoaster</a></li>
+            <li><a href="https://t.me/chattyappsbot" target="_blank" rel="noopener noreferrer" class="footer-link">Бот: @chattyappsbot</a></li>
+            <li style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted);">
+              Сайт не собирает персональные данные без вашего согласия.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 ChattyApps Studio. Все права защищены.</div>
+        <div>Спроектировано для высокой надежности и конверсии.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="projects-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
