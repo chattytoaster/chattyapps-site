@@ -2,69 +2,79 @@
 
 Минималистичный высокопроизводительный сайт-портфолио студии разработки **ChattyApps**.
 
-Сайт разработан в строгом типографическом стиле: чистая архитектура, темная/светлая тема, быстрый отклик, раскрывающиеся карточки проектов и прямая интеграция с Telegram.
+Сайт разработан в строгом типографическом стиле (Apple / Vercel): чистая архитектура, темная и светлая темы, мгновенный отклик, выделенные персональные лендинги для каждого проекта и прямая интеграция с Telegram.
 
 ---
 
-## 📁 Структура портфолио
+## 📁 Структура сайта
 
 ```text
-chattyapps-portfolio/
-├── index.html            # Главная семантическая HTML5-разметка страницы
+chattyapps-site/
+├── index.html            # Главная страница портфолио и витрина проектов
+├── secondsyear.html      # Персональный лендинг SecondsYear (Android)
+├── yttvaf.html           # Персональный лендинг YouTube TV Mod (Android TV)
+├── antigravitytg.html    # Персональный лендинг AntigravityTG (CLI & Telegram)
+├── checkrename.html      # Персональный лендинг CheckRename (Windows Desktop OCR)
+├── vozduh.html           # Персональный лендинг VOZDUH Glamping (MiniApp & Bot)
+├── beautybot.html        # Персональный лендинг BeautyBot (CRM & Запись)
+├── chattyapps.html       # Персональный лендинг ChattyApps Studio Bot & API
 ├── styles.css            # Минималистичная дизайн-система и адаптивные стили
-├── script.js             # Контроллер тем, фильтров и аккордеона проектов
-├── projects-data.js      # Структурированные кейсы 6 проектов (без исходного кода)
-├── README.md             # Документация проекта
-└── assets/               # Векторный логотип и иконки проектов
-    ├── logo.svg          # Фирменный логотип студии ChattyApps
-    ├── secondsyear-icon.png
-    ├── antigravity-icon.svg
-    ├── antigravity-preview.jpg
-    ├── checkrename-icon.png
-    ├── checkrename-icon.ico
-    ├── vozduh-icon.png
-    └── beautybot-icon.svg
+├── script.js             # Контроллер тем, динамических счетчиков и аккордеонов
+├── projects-data.js      # Структурированные метаданные 7 проектов
+└── assets/               # Векторный логотип, иконки и скриншоты проектов
 ```
 
 ---
 
 ## 🌟 Представленные проекты в портфолио
 
-В портфолио добавлены все 6 ключевых разработок:
+В портфолио представлены все 7 ключевых разработок с выделенными лендингами:
 
 1. **SecondsYear** (`Android & Мобильные`)
-   - Нативное приложение на **Jetpack Compose** + **CameraX** + **Media3** для ежедневной съемки видеохроник (1s–60s) и кинематографичного аппаратного монтажа годовых роликов.
-   - *Страница приложения*: [RuStore (com.chatty.secondsyear)](https://www.rustore.ru/catalog/app/com.chatty.secondsyear).
-   - *Исходный код*: приватный (NDA). Доступна кнопка «Посмотреть».
-2. **AntigravityTG** (`Telegram & Системные утилиты`)
-   - Удаленный командный центр в Telegram для прямого управления локальным терминалом, консольными процессами, запуска скриптов и тестов на ПК со смартфона.
-   - *Исходный код*: открытый на GitHub → [github.com/chattytoaster/AntigravityTG](https://github.com/chattytoaster/AntigravityTG).
-3. **CheckRename** (`Desktop Windows & Автоматизация`)
-   - Автономная Windows-утилита в системном трее с интеграцией в контекстное меню Проводника (ПКМ) и двухслойным распознаванием (PDF + **Tesseract OCR**) для автопереименования счетов.
-   - *Исходный код*: открытый на GitHub → [github.com/chattytoaster/checkrename](https://github.com/chattytoaster/checkrename).
-4. **VOZDUH** (`Telegram MiniApp & Бронирование`)
-   - Комплексный сервис онлайн-бронирования домиков и глэмпинга: пошаговый FSM-бот, веб-интерфейс **Telegram MiniApp**, двусторонняя синхронизация с **Google Sheets & Calendar**, система сгораемых бонусов и сертификатов.
+   - Нативное приложение на **Kotlin / Jetpack Compose** + **CameraX** + **Media3** для ежедневной съемки видеохроник (1s–60s) и кинематографичного аппаратного монтажа годовых роликов без водяных знаков.
+   - *Страница в RuStore*: [RuStore (com.chatty.secondsyear)](https://www.rustore.ru/catalog/app/com.chatty.secondsyear).
+   - *Лендинг*: `secondsyear.html` (кнопка «Открыть» → RuStore).
+
+2. **YouTube TV Mod (com.chatty.yttvaf)** (`Android & TV`)
+   - Модифицированный клиент YouTube для Android TV / Smart TV на движке Chromium/Cobalt со встроенным локальным SOCKS5-петлевым туннелем (Local loopback), Web-интерфейсом управления (`:8888`), нативным меню для пульта, **SponsorBlock** (8 категорий) и **AdBlock**.
+   - *Репозиторий на GitHub*: [github.com/chattytoaster/yttvaf](https://github.com/chattytoaster/yttvaf).
+   - *Лендинг*: `yttvaf.html` (кнопка «Открыть» → GitHub, кнопка «Скачать APK»).
+
+3. **AntigravityTG** (`Telegram & Системные утилиты`)
+   - Серверная система мониторинга и удаленного администрирования рабочего ПК через Telegram: Win32 IPC-мост, терминал, многоэкранные скриншоты, управление электропитанием и безопасность по whitelist Telegram ID.
+   - *Репозиторий на GitHub*: [github.com/chattytoaster/AntigravityTG](https://github.com/chattytoaster/AntigravityTG).
+   - *Лендинг*: `antigravitytg.html` (кнопка «Открыть» → GitHub).
+
+4. **CheckRename (docrename)** (`Desktop Windows & Автоматизация`)
+   - Автономная Windows-утилита на **PyQt6** с двухслойным распознаванием (PDF/PyMuPDF + **Tesseract OCR**) для автоматического пакетного переименования счетов и актов без отправки файлов в интернет.
+   - *Репозиторий на GitHub*: [github.com/chattytoaster/checkrename](https://github.com/chattytoaster/checkrename).
+   - *Лендинг*: `checkrename.html` (кнопка «Открыть» → GitHub).
+
+5. **VOZDUH** (`Telegram MiniApp & Бронирование`)
+   - Цифровая экосистема онлайн-бронирования глэмпинга: пошаговый FSM-бот на Aiogram 3, веб-интерфейс **Telegram MiniApp**, двусторонняя синхронизация с **Google Sheets & Calendar** в реальном времени, предотвращающая овербукинг.
    - *Сайт проекта*: [vozduh.net](https://vozduh.net)
    - *Telegram-бот*: [@vozduhglampingbot](https://t.me/vozduhglampingbot)
-   - *Исходный код*: коммерческий / закрытый. Доступна кнопка «Посмотреть».
-5. **BeautyBot** (`CRM & Онлайн-запись`)
-   - Автоматизированный бот для салонов красоты и мастеров с интерактивным календарем свободных окон, выбором услуг, мастеров и личным кабинетом клиента.
-   - *Исходный код*: коммерческий / закрытый. Доступна кнопка «Посмотреть».
-6. **ChattyApps Studio Bot & License Server** (`Экосистема & REST API`)
-   - Презентационный бот-витрина студии с CRM-сбором лидов и встроенным **HTTP REST API сервером** на `aiohttp` для валидации премиум-лицензий приложения SecondsYear.
-   - *Исходный код*: коммерческий / закрытый. Доступна кнопка «Посмотреть».
+   - *Лендинг*: `vozduh.html` (кнопка «Открыть» → Telegram-бот, кнопка «Сайт»).
 
-> 💡 **Кнопка «Посмотреть»**: присутствует у каждого проекта (открывает живого бота, репозиторий или интерактивный запрос). Ссылки на исходный код привязаны исключительно к публичным репозиториям на GitHub.
+6. **BeautyBot** (`CRM & Онлайн-запись`)
+   - Автоматизированный бот для салонов красоты и частных мастеров с интерактивным календарем свободных слотов, расчетом времени процедур и напоминаниями для снижения неявок.
+   - *Статус*: Сейчас недоступен (кнопка деактивирована).
+   - *Лендинг*: `beautybot.html` (кнопка «Открыть» неактивна с подписью «сейчас недоступно»).
+
+7. **ChattyApps Studio Bot & License Server** (`Экосистема & REST API`)
+   - Флагманский бот-витрина студии с калькулятором брифа и встроенным **HTTP REST API сервером** для генерации и верификации лицензий мобильного приложения SecondsYear.
+   - *Telegram-бот*: [@chattyappsbot](https://t.me/chattyappsbot)
+   - *Лендинг*: `chattyapps.html` (кнопка «Открыть» → Telegram-бот).
 
 ---
 
 ## ⚡ Быстрый запуск
 
 ### Вариант 1. Без установки сервера
-Просто откройте файл `index.html` в любом современном браузере (Chrome, Edge, Firefox, Safari, Opera).
+Просто откройте файл `index.html` в любом современном браузере.
 
 ### Вариант 2. Локальный сервер на Python
-Выполните в папке `chattyapps-portfolio`:
+Выполните в папке проекта:
 ```bash
 python -m http.server 8000
 ```
@@ -72,19 +82,23 @@ python -m http.server 8000
 
 ---
 
-## 🚀 Деплой
+## 🚀 Деплой на GitHub Pages
 
-Сайт полностью статичен и готов к бесплатному мгновенному деплою:
-- **GitHub Pages**: загрузите репозиторий на GitHub и включите Pages в настройках репозитория.
-- **Vercel / Netlify**: перетащите папку `chattyapps-portfolio` в панель управления Vercel или Netlify.
-- **Nginx / VPS**: скопируйте файлы в `/var/www/html/` или корневую директорию вашего веб-сервера.
+Репозиторий опубликован по адресу:
+👉 **[https://github.com/chattytoaster/chattyapps-site](https://github.com/chattytoaster/chattyapps-site)**
+
+Чтобы включить бесплатный хостинг:
+1. Перейдите в **Settings** репозитория → раздел **Pages**.
+2. В **Build and deployment** выберите Source: **Deploy from a branch**.
+3. Выберите ветку **main** и папку `/ (root)`. Нажмите **Save**.
+4. Сайт станет доступен по адресу:
+   ```text
+   https://chattytoaster.github.io/chattyapps-site/
+   ```
 
 ---
 
-## 🛠 Настройка контактов
+## 🛠 Контакты студии
 
-Все контактные ссылки настроены на:
-- Telegram разработчика: [@chtoaster](https://t.me/chtoaster)
-- Официальный бот: [@chattyappsbot](https://t.me/chattyappsbot)
-
-При необходимости изменить контакты, отредактируйте ссылки в файлах `index.html`, `script.js` и `projects-data.js`.
+- Telegram: [@chtoaster](https://t.me/chtoaster)
+- Официальный бот студии: [@chattyappsbot](https://t.me/chattyappsbot)
