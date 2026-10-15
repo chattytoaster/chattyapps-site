@@ -117,6 +117,46 @@ function initProjectsList() {
         `);
       }
 
+      const rowViewButtonHtml = project.isUnavailable
+        ? `
+          <div class="action-btn-group is-disabled" onclick="event.stopPropagation()">
+            <button type="button" class="btn-view is-disabled" disabled aria-disabled="true" title="${project.unavailableLabel || 'сейчас недоступно'}">
+              <span>${project.viewLabel || 'Посмотреть'}</span>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </button>
+            <span class="badge-unavailable">${project.unavailableLabel || 'сейчас недоступно'}</span>
+          </div>
+        `
+        : `
+          <a href="${project.viewUrl}" target="_blank" rel="noopener noreferrer" class="btn-view" title="${project.viewLabel || 'Посмотреть'}" onclick="event.stopPropagation()">
+            <span>${project.viewLabel || 'Посмотреть'}</span>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        `;
+
+      const drawerViewButtonHtml = project.isUnavailable
+        ? `
+          <div class="drawer-unavailable-group">
+            <button type="button" class="drawer-btn-view is-disabled" disabled aria-disabled="true">
+              <span>${project.viewLabel || 'Посмотреть'}</span>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </button>
+            <span class="badge-unavailable">${project.unavailableLabel || 'сейчас недоступно'}</span>
+          </div>
+        `
+        : `
+          <a href="${project.viewUrl}" target="_blank" rel="noopener noreferrer" class="drawer-btn-view">
+            <span>${project.viewLabel || 'Посмотреть'}</span>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        `;
+
       item.innerHTML = `
         <div class="project-row" role="button" tabindex="0" aria-expanded="false">
           <div class="project-leading">
@@ -132,13 +172,7 @@ function initProjectsList() {
             </div>
           </div>
           <div class="project-row-actions">
-            <a href="${project.viewUrl}" target="_blank" rel="noopener noreferrer" class="btn-view" title="Посмотреть" onclick="event.stopPropagation()">
-              <span>Посмотреть</span>
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <line x1="7" y1="17" x2="17" y2="7"></line>
-                <polyline points="7 7 17 7 17 17"></polyline>
-              </svg>
-            </a>
+            ${rowViewButtonHtml}
             ${extraRowLinks.join("")}
             <div class="project-expand-icon" title="Подробнее">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -192,10 +226,7 @@ function initProjectsList() {
 
             <div class="drawer-footer">
               <div class="drawer-actions-left">
-                <a href="${project.viewUrl}" target="_blank" rel="noopener noreferrer" class="drawer-btn-view">
-                  <span>Посмотреть</span>
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                </a>
+                ${drawerViewButtonHtml}
 
                 ${drawerExtraLinks.join("")}
 
