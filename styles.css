@@ -365,6 +365,55 @@ body.light-theme .moon-icon { display: none; }
   line-height: 1.5;
 }
 
+.project-row-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.btn-view {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: var(--bg-badge);
+  border: 1px solid var(--border-medium);
+  padding: 5px 12px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.btn-view:hover {
+  background: var(--text-primary);
+  color: var(--bg-body);
+  border-color: var(--text-primary);
+}
+
+.btn-view-code {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.btn-view-code:hover {
+  color: var(--text-primary);
+  border-color: var(--border-medium);
+  background: var(--bg-surface-hover);
+}
+
 .project-expand-icon {
   width: 28px;
   height: 28px;
@@ -462,10 +511,64 @@ body.light-theme .moon-icon { display: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 14px;
+  padding-top: 18px;
   border-top: 1px solid var(--border-subtle);
-  font-size: 0.82rem;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.drawer-actions-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.drawer-btn-view {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--bg-body);
+  background: var(--text-primary);
+  border: 1px solid var(--text-primary);
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+}
+
+.drawer-btn-view:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.drawer-btn-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: var(--bg-badge);
+  border: 1px solid var(--border-medium);
+  padding: 6px 13px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+}
+
+.drawer-btn-github:hover {
+  border-color: var(--text-primary);
+  background: var(--bg-surface-hover);
+}
+
+.drawer-nda-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
   color: var(--text-muted);
+  font-family: var(--font-mono);
 }
 
 .drawer-cta {
@@ -562,6 +665,17 @@ body.light-theme .moon-icon { display: none; }
   }
   .project-row {
     padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .project-row-actions {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+  .project-expand-icon {
+    margin-left: auto;
   }
   .drawer-content {
     padding: 18px 16px;
@@ -569,6 +683,9 @@ body.light-theme .moon-icon { display: none; }
   .drawer-footer {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 12px;
+  }
+  .drawer-actions-left {
+    width: 100%;
   }
 }
