@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AntigravityTG — Удаленный командный центр и терминал для ПК — ChattyApps</title>
+  <meta name="description" content="Удаленный мониторинг и системное администрирование рабочего ПК через Telegram. Защищенный IPC-шлюз, скриншоты, управление электропитанием и терминал." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/antigravity-icon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <header class="landing-nav-bar">
+      <div class="landing-nav-left">
+        <a href="index.html" class="landing-back-link" title="Вернуться в портфолио">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>ChattyApps Studio</span>
+        </a>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://github.com/chattytoaster/AntigravityTG" target="_blank" rel="noopener noreferrer" class="link-arrow" style="font-size: 0.84rem;">
+          <span>GitHub</span>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+
+        <button id="theme-toggle" class="theme-btn" aria-label="Сменить тему">
+          <svg class="sun-icon" viewBox="0 0 24 24">
+            <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24">
+            <path d="M12.3 2a10 10 0 0 0-1.9 20 10 10 0 0 0 9.7-7.6 1 1 0 0 0-1.2-1.2 8 8 0 1 1-7.8-12.4 1 1 0 0 0 1.2-1.2A10 10 0 0 0 12.3 2z"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="landing-hero">
+      <div class="landing-head">
+        <img src="assets/antigravity-icon.svg" alt="AntigravityTG" class="landing-app-icon" />
+        <div class="landing-title-wrap">
+          <div class="landing-meta-tags">
+            <span class="project-tag">Telegram & Desktop</span>
+            <span class="project-tag">Python 3.12</span>
+            <span class="project-tag">Open Source</span>
+            <span class="project-tag">2026</span>
+          </div>
+          <h1 class="landing-title">AntigravityTG</h1>
+        </div>
+      </div>
+
+      <p class="landing-lead">
+        Персональная серверная система мониторинга и удаленного администрирования рабочего ПК через Telegram. Защищенный IPC-шлюз, мгновенные скриншоты нескольких дисплеев, управление электропитанием, запуск консольных скриптов и обмен файлами с телефона без белого IP и проброса портов.
+      </p>
+
+      <!-- Primary Action Buttons -->
+      <div class="landing-actions">
+        <a href="https://github.com/chattytoaster/AntigravityTG" target="_blank" rel="noopener noreferrer" class="btn-primary-open">
+          <span>Открыть</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+
+        <a href="https://github.com/chattytoaster/AntigravityTG" target="_blank" rel="noopener noreferrer" class="btn-secondary-action">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>Исходный код (GitHub)</span>
+        </a>
+
+        <a href="index.html" class="btn-secondary-action">
+          <span>← В портфолио</span>
+        </a>
+      </div>
+
+      <!-- Quick Metrics -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <span class="metric-val">&lt; 0.5 сек</span>
+          <span class="metric-lbl">Отклик на команды</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-val">100%</span>
+          <span class="metric-lbl">Изоляция по Telegram ID</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-val">0 портов</span>
+          <span class="metric-lbl">Белый IP не требуется</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-val">Win32 + IPC</span>
+          <span class="metric-lbl">Глубокая интеграция с ОС</span>
+        </div>
+      </div>
+
+      <!-- Preview Image Showcase -->
+      <div class="landing-media-box">
+        <img src="assets/antigravity-preview.jpg" alt="Интерфейс мобильного командного центра AntigravityTG" loading="lazy" />
+        <div class="landing-media-caption">
+          <span>Интерфейс удаленного терминала и мониторинга ПК в Telegram</span>
+          <span>AntigravityTG Console</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Возможности и функционал</h2>
+      </div>
+
+      <div>
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>📸 Моментальные скриншоты рабочих столов</span>
+          </div>
+          <p class="landing-feature-desc">
+            Захват всех активных мониторов с автоматической оптимизацией размера файла и быстрой доставкой фотографии в чат Telegram для визуального контроля запущенных рендеров или фоновых задач.
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>⌨ Удаленный терминал PowerShell / CMD</span>
+          </div>
+          <p class="landing-feature-desc">
+            Исполнение консольных инструкций в изолированном асинхронном потоке с возвратом форматированного вывода (stdout/stderr) и поддержкой таймаутов от зависаний.
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>🔌 Управление электропитанием системы</span>
+          </div>
+          <p class="landing-feature-desc">
+            Команды перевода ПК в спящий режим, гибернацию, перезагрузку или экстренное отключение, а также блокировка рабочего стола при удалении от компьютера.
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>📁 Двусторонний обмен файлами и буфером</span>
+          </div>
+          <p class="landing-feature-desc">
+            Возможность отправить документ со смартфона напрямую на рабочий стол или запросить выгрузку логов и файлов из любых папок файловой системы.
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>🔒 Безопасность и контроль доступа</span>
+          </div>
+          <p class="landing-feature-desc">
+            Строгая фильтрация входящих сообщений по списку доверенных Telegram ID (whitelist), блокировка спама и полное игнорирование неавторизованных пользователей.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture & Stack -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Архитектура и безопасность</h2>
+      </div>
+
+      <div class="contact-box" style="margin-bottom: 24px;">
+        <p class="drawer-text" style="margin-bottom: 14px;">
+          Архитектура построена на асинхронном event loop (Python 3.12 + Aiogram 3) с прямыми вызовами Windows API через ctypes. Бот использует исходящий TLS long-polling к серверам Telegram, что полностью устраняет необходимость открывать порты в брандмауэре или арендовать статический IP-адрес.
+        </p>
+
+        <div class="drawer-stack">
+          <span class="stack-pill">Python 3.12</span>
+          <span class="stack-pill">Aiogram 3</span>
+          <span class="stack-pill">Windows API (ctypes)</span>
+          <span class="stack-pill">Pillow / mss</span>
+          <span class="stack-pill">Asyncio Subprocess</span>
+          <span class="stack-pill">System Tray</span>
+          <span class="stack-pill">PyInstaller</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons Bottom -->
+      <div class="landing-actions" style="margin-top: 32px;">
+        <a href="https://github.com/chattytoaster/AntigravityTG" target="_blank" rel="noopener noreferrer" class="btn-primary-open">
+          <span>Открыть на GitHub</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+
+        <a href="index.html" class="btn-secondary-action">
+          <span>← Назад в портфолио</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div>
+        <span>© 2026 ChattyApps. Все права защищены.</span>
+      </div>
+      <div>
+        <a href="https://t.me/chtoaster" target="_blank" rel="noopener noreferrer" class="link-arrow">
+          <span>Связаться: @chtoaster</span>
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

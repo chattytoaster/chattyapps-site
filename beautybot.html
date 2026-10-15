@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BeautyBot — Умная онлайн-запись и CRM для индустрии красоты — ChattyApps</title>
+  <meta name="description" content="Telegram-бот для автоматической круглосуточной записи клиентов в салоны красоты с динамическим расчетом доступных слотов и личным кабинетом." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/beautybot-icon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <header class="landing-nav-bar">
+      <div class="landing-nav-left">
+        <a href="index.html" class="landing-back-link" title="Вернуться в портфолио">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>ChattyApps Studio</span>
+        </a>
+      </div>
+
+      <div class="header-actions">
+        <span class="badge-unavailable">сейчас недоступно</span>
+
+        <button id="theme-toggle" class="theme-btn" aria-label="Сменить тему">
+          <svg class="sun-icon" viewBox="0 0 24 24">
+            <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24">
+            <path d="M12.3 2a10 10 0 0 0-1.9 20 10 10 0 0 0 9.7-7.6 1 1 0 0 0-1.2-1.2 8 8 0 1 1-7.8-12.4 1 1 0 0 0 1.2-1.2A10 10 0 0 0 12.3 2z"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="landing-hero">
+      <div class="landing-head">
+        <img src="assets/beautybot-icon.svg" alt="BeautyBot" class="landing-app-icon" />
+        <div class="landing-title-wrap">
+          <div class="landing-meta-tags">
+            <span class="project-tag">Telegram-бот</span>
+            <span class="project-tag">CRM & Онлайн-запись</span>
+            <span class="badge-unavailable">сейчас недоступно</span>
+          </div>
+          <h1 class="landing-title">BeautyBot</h1>
+        </div>
+      </div>
+
+      <p class="landing-lead">
+        Telegram-бот для автоматической круглосуточной записи клиентов в салоны красоты и к частным мастерам. Устраняет рутину телефонных звонков и переписок в директе. Клиенты выбирают услугу, мастера, дату и свободный временной интервал из адаптивного календаря за 30 секунд.
+      </p>
+
+      <!-- Primary Action Buttons (Disabled as requested) -->
+      <div class="landing-actions">
+        <div class="action-btn-group is-disabled" title="сейчас недоступно">
+          <button type="button" class="btn-primary-open is-disabled" disabled aria-disabled="true">
+            <span>Открыть</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </button>
+          <span class="badge-unavailable">сейчас недоступно</span>
+        </div>
+
+        <a href="https://t.me/chtoaster?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0%20%D0%B1%D0%BE%D1%82%D0%B0%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B8%20%D0%B4%D0%BB%D1%8F%20%D1%81%D0%B0%D0%BB%D0%BE%D0%BD%D0%B0" target="_blank" rel="noopener noreferrer" class="btn-secondary-action">
+          <span>Заказать похожее решение</span>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+
+        <a href="index.html" class="btn-secondary-action">
+          <span>← В портфолио</span>
+        </a>
+      </div>
+
+      <!-- Quick Metrics -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <span class="metric-val">~30 сек</span>
+          <span class="metric-lbl">Время на онлайн-запись</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-val">24/7</span>
+          <span class="metric-lbl">Прием заявок без оператора</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-val">в 2.5 раза</span>
+          <span class="metric-lbl">Снижение неявок (No-Show)</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-val">0%</span>
+          <span class="metric-lbl">Коллизий и двойных записей</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Функционал системы</h2>
+      </div>
+
+      <div>
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>💅 Каталог услуг с автоматическим расчетом времени</span>
+          </div>
+          <p class="landing-feature-desc">
+            Разделы процедур с описаниями, ценами и индивидуальной продолжительностью каждого типа приема. Бот автоматически резервирует нужное количество слотов.
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>📅 Динамический инлайн-календарь окон</span>
+          </div>
+          <p class="landing-feature-desc">
+            Свободные даты и временные окна рассчитываются в реальном времени с учетом графика работы мастеров, перерывов и уже оформленных записей.
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>👤 Личный кабинет клиента</span>
+          </div>
+          <p class="landing-feature-desc">
+            Возможность клиента в любой момент посмотреть детали своего предстоящего визита, перенести время на другой свободный слот или отменить запись в 1 клик.
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>🔔 Админ-модуль и уведомления</span>
+          </div>
+          <p class="landing-feature-desc">
+            Мгновенная отправка данных о новой брони в закрытый чат администраторов салона с контактами клиента, выбранным мастером и итоговой стоимостью.
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>⏰ Автоматические напоминания накануне визита</span>
+          </div>
+          <p class="landing-feature-desc">
+            Таймерные уведомления за сутки и за 2 часа до начала процедуры с кнопкой подтверждения присутствия для минимизации простоев мастеров.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture & Stack -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Архитектура и технологии</h2>
+      </div>
+
+      <div class="contact-box" style="margin-bottom: 24px;">
+        <p class="drawer-text" style="margin-bottom: 14px;">
+          Архитектура на основе конечных автоматов состояний (FSM State Machine) в связке с реляционной базой данных SQLite. Алгоритм проверки коллизий временных слотов с учетом длительности процедур и графиков смен мастеров.
+        </p>
+
+        <div class="drawer-stack">
+          <span class="stack-pill">Python 3.11+</span>
+          <span class="stack-pill">Aiogram 3</span>
+          <span class="stack-pill">FSM State Machine</span>
+          <span class="stack-pill">SQLite Database</span>
+          <span class="stack-pill">Dynamic Keyboards</span>
+          <span class="stack-pill">Asyncio Scheduler</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons Bottom -->
+      <div class="landing-actions" style="margin-top: 32px;">
+        <div class="action-btn-group is-disabled" title="сейчас недоступно">
+          <button type="button" class="btn-primary-open is-disabled" disabled aria-disabled="true">
+            <span>Открыть</span>
+          </button>
+          <span class="badge-unavailable">сейчас недоступно</span>
+        </div>
+
+        <a href="index.html" class="btn-secondary-action">
+          <span>← Назад в портфолио</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div>
+        <span>© 2026 ChattyApps. Все права защищены.</span>
+      </div>
+      <div>
+        <a href="https://t.me/chtoaster" target="_blank" rel="noopener noreferrer" class="link-arrow">
+          <span>Связаться: @chtoaster</span>
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

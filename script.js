@@ -119,14 +119,14 @@ function initProjectsList() {
 
       const rowViewButtonHtml = project.isUnavailable
         ? `
-          <div class="action-btn-group is-disabled" onclick="event.stopPropagation()">
-            <button type="button" class="btn-view is-disabled" disabled aria-disabled="true" title="${project.unavailableLabel || 'сейчас недоступно'}">
+          <div class="action-btn-group" onclick="event.stopPropagation()">
+            <a href="${project.viewUrl}" target="_blank" rel="noopener noreferrer" class="btn-view" title="${project.viewLabel || 'Посмотреть'}">
               <span>${project.viewLabel || 'Посмотреть'}</span>
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <line x1="7" y1="17" x2="17" y2="7"></line>
                 <polyline points="7 7 17 7 17 17"></polyline>
               </svg>
-            </button>
+            </a>
             <span class="badge-unavailable">${project.unavailableLabel || 'сейчас недоступно'}</span>
           </div>
         `
@@ -143,10 +143,10 @@ function initProjectsList() {
       const drawerViewButtonHtml = project.isUnavailable
         ? `
           <div class="drawer-unavailable-group">
-            <button type="button" class="drawer-btn-view is-disabled" disabled aria-disabled="true">
+            <a href="${project.viewUrl}" target="_blank" rel="noopener noreferrer" class="drawer-btn-view">
               <span>${project.viewLabel || 'Посмотреть'}</span>
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            </button>
+            </a>
             <span class="badge-unavailable">${project.unavailableLabel || 'сейчас недоступно'}</span>
           </div>
         `

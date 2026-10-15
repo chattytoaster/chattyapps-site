@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecondsYear — Каждый день в одном памятном видео — ChattyApps</title>
+  <meta name="description" content="Нативное Android-приложение на Jetpack Compose для ежедневной видеохроники жизни и автоматического монтажа годовых фильмов без потери качества." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/secondsyear-icon.png" type="image/png" />
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <header class="landing-nav-bar">
+      <div class="landing-nav-left">
+        <a href="index.html" class="landing-back-link" title="Вернуться в портфолио">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>ChattyApps Studio</span>
+        </a>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://www.rustore.ru/catalog/app/com.chatty.secondsyear" target="_blank" rel="noopener noreferrer" class="link-arrow" style="font-size: 0.84rem;">
+          <span>RuStore</span>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+
+        <button id="theme-toggle" class="theme-btn" aria-label="Сменить тему">
+          <svg class="sun-icon" viewBox="0 0 24 24">
+            <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24">
+            <path d="M12.3 2a10 10 0 0 0-1.9 20 10 10 0 0 0 9.7-7.6 1 1 0 0 0-1.2-1.2 8 8 0 1 1-7.8-12.4 1 1 0 0 0 1.2-1.2A10 10 0 0 0 12.3 2z"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="landing-hero">
+      <div class="landing-head">
+        <img src="assets/secondsyear-icon.png" alt="SecondsYear" class="landing-app-icon" />
+        <div class="landing-title-wrap">
+          <div class="landing-meta-tags">
+            <span class="project-tag">Android</span>
+            <span class="project-tag">Jetpack Compose</span>
+            <span class="project-tag">RuStore</span>
+            <span class="project-tag">2026</span>
+          </div>
+          <h1 class="landing-title">SecondsYear</h1>
+        </div>
+      </div>
+
+      <p class="landing-lead">
+        Нативное Android-приложение для сохранения каждого дня жизни в лаконичных видеороликах и автоматической склейки в эмоциональный годовой фильм. Собственная гибкая камера (16:9), календарь с живыми превью, покадровый редактор и аппаратный монтаж без водяных знаков и потери битрейта.
+      </p>
+
+      <!-- Primary Action Buttons -->
+      <div class="landing-actions">
+        <a href="https://www.rustore.ru/catalog/app/com.chatty.secondsyear" target="_blank" rel="noopener noreferrer" class="btn-primary-open">
+          <span>Открыть</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+
+        <a href="https://www.rustore.ru/catalog/app/com.chatty.secondsyear" target="_blank" rel="noopener noreferrer" class="btn-secondary-action">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Страница в RuStore</span>
+        </a>
+
+        <a href="https://t.me/chattyappsbot" target="_blank" rel="noopener noreferrer" class="btn-secondary-action">
+          <span>Справка и поддержка</span>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+      </div>
+
+      <!-- Quick Metrics -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <span class="metric-val">7 форматов</span>
+          <span class="metric-lbl">1s, 3s, 5s, 10s, 30s, 60s, Any</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-val">100%</span>
+          <span class="metric-lbl">Оригинальное качество</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-val">0</span>
+          <span class="metric-lbl">Водяных знаков и рекламы</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-val">Аппаратный</span>
+          <span class="metric-lbl">Монтаж на MediaCodec</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem & Solution -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Концепция продукта</h2>
+      </div>
+
+      <div class="contact-box" style="margin-bottom: 24px;">
+        <p class="drawer-text" style="margin-bottom: 12px;">
+          <strong>Проблема:</strong> Галереи смартфонов переполнены гигабайтами случайных фото и видео, которые никто никогда не пересматривает. Мировые аналоги либо требуют дорогую ежемесячную подписку, либо сжимают ролики до потери резкости и накладывают водяные знаки.
+        </p>
+        <p class="drawer-text">
+          <strong>Решение:</strong> Автономное приложение без подписочных ловушек, спроектированное на Jetpack Compose с кастомной камерой CameraX, удобным календарем с превью каждого дня и сверхбыстрым аппаратным склеиванием роликов в готовый фильм.
+        </p>
+      </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Функциональные возможности</h2>
+      </div>
+
+      <div>
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>📷 Кастомный модуль камеры CameraX</span>
+          </div>
+          <p class="landing-feature-desc">
+            Формат кадра 16:9, переключение фронтальной и основной камеры, адаптивный оптический и цифровой зум, вспышка, таймеры задержки (3, 5, 10 секунд), отзеркаливание селфи-видео.
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>⏱ 7 независимых режимов хронометража</span>
+          </div>
+          <p class="landing-feature-desc">
+            Поддержка популярных форматов хроники: 1 секунда, 3 секунды, 5 секунд, 10 секунд, 30 секунд, 60 секунд и адаптивный режим Any с индивидуальной настройкой длины фрагмента под каждый день.
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>📅 Интерактивная сетка календаря</span>
+          </div>
+          <p class="landing-feature-desc">
+            Мгновенный переход по годам и месяцам, живые кадры-превью для каждого отснятого дня, индикация пропущенных дней и статуса заполненности проекта.
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>✂ Встроенный покадровый редактор</span>
+          </div>
+          <p class="landing-feature-desc">
+            Выбор начальной точки с помощью точного таймлайн-слайдера, обрезка видеороликов, возможность импортировать и заменить видео из галереи телефона.
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>⚡ Аппаратный движок видеосклейки</span>
+          </div>
+          <p class="landing-feature-desc">
+            Монтаж всех сохраненных дней в единый кинематографичный MP4-ролик с аппаратным кодированием через MediaCodec без потери битрейта, артефактов пережатия и чужих водяных знаков.
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>☁ Интеграция с ChattyApps API</span>
+          </div>
+          <p class="landing-feature-desc">
+            Быстрая проверка лицензий SecondsYear Premium, получение обновлений и динамических уведомлений студии через защищенный REST API.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture & Tech Stack -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Архитектура и стек</h2>
+      </div>
+
+      <div class="contact-box" style="margin-bottom: 24px;">
+        <p class="drawer-text" style="margin-bottom: 14px;">
+          Архитектура Clean Architecture + MVVM. Реактивные потоки состояния StateFlow/SharedFlow, изоляция бизнес-логики в Use Cases, локальное кэширование метаданных в Room, аппаратное ускорение видеорендеринга через MediaCodec.
+        </p>
+
+        <div class="drawer-stack">
+          <span class="stack-pill">Kotlin</span>
+          <span class="stack-pill">Jetpack Compose</span>
+          <span class="stack-pill">CameraX</span>
+          <span class="stack-pill">Media3 / ExoPlayer</span>
+          <span class="stack-pill">Room Database</span>
+          <span class="stack-pill">Coroutines & Flow</span>
+          <span class="stack-pill">Material Design 3</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons Bottom -->
+      <div class="landing-actions" style="margin-top: 32px;">
+        <a href="https://www.rustore.ru/catalog/app/com.chatty.secondsyear" target="_blank" rel="noopener noreferrer" class="btn-primary-open">
+          <span>Открыть в RuStore</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+
+        <a href="index.html" class="btn-secondary-action">
+          <span>← Назад в портфолио</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div>
+        <span>© 2026 ChattyApps. Все права защищены.</span>
+      </div>
+      <div>
+        <a href="https://t.me/chtoaster" target="_blank" rel="noopener noreferrer" class="link-arrow">
+          <span>Связаться: @chtoaster</span>
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
