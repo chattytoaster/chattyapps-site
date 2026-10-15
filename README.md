@@ -15,12 +15,15 @@ chattyapps-portfolio/
 ├── script.js             # Контроллер тем, фильтров и аккордеона проектов
 ├── projects-data.js      # Структурированные кейсы 6 проектов (без исходного кода)
 ├── README.md             # Документация проекта
-└── assets/               # Векторный логотип и визуальные ассеты
+└── assets/               # Векторный логотип и иконки проектов
     ├── logo.svg          # Фирменный логотип студии ChattyApps
     ├── secondsyear-icon.png
+    ├── antigravity-icon.svg
     ├── antigravity-preview.jpg
     ├── checkrename-icon.png
-    └── checkrename-icon.ico
+    ├── checkrename-icon.ico
+    ├── vozduh-icon.png
+    └── beautybot-icon.svg
 ```
 
 ---

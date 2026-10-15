@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" fill="none">
+  <defs>
+    <linearGradient id="antigravBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181a24"/>
+      <stop offset="100%" stop-color="#0e1017"/>
+    </linearGradient>
+    <linearGradient id="antigravAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Container -->
+  <rect x="8" y="8" width="104" height="104" rx="24" fill="url(#antigravBg)" stroke="#262a38" stroke-width="2"/>
+
+  <!-- Command Prompt Chevron > -->
+  <path d="M36 42L54 59L36 76" stroke="url(#antigravAccent)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Terminal Underscore _ -->
+  <line x1="62" y1="76" x2="84" y2="76" stroke="#ededed" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Subtle Remote Signal Dots -->
+  <circle cx="78" cy="42" r="3" fill="#38bdf8"/>
+  <circle cx="88" cy="42" r="3" fill="#818cf8"/>
+</svg>

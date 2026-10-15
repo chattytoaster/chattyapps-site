@@ -73,12 +73,17 @@ function initProjectsList() {
 
       item.innerHTML = `
         <div class="project-row" role="button" tabindex="0" aria-expanded="false">
-          <div class="project-info">
-            <div class="project-meta-line">
-              <span class="project-title">${project.title}</span>
-              <span class="project-tag">${project.category}</span>
+          <div class="project-leading">
+            <div class="project-avatar">
+              <img src="${project.icon}" alt="${project.title}" loading="lazy" />
             </div>
-            <p class="project-desc-short">${project.summary}</p>
+            <div class="project-info">
+              <div class="project-meta-line">
+                <span class="project-title">${project.title}</span>
+                <span class="project-tag">${project.category}</span>
+              </div>
+              <p class="project-desc-short">${project.summary}</p>
+            </div>
           </div>
           <div class="project-row-actions">
             <a href="${project.viewUrl}" target="_blank" rel="noopener noreferrer" class="btn-view" title="Посмотреть" onclick="event.stopPropagation()">
@@ -99,6 +104,16 @@ function initProjectsList() {
 
         <div class="project-drawer">
           <div class="drawer-content">
+            <div class="drawer-head-box">
+              <div class="drawer-avatar">
+                <img src="${project.icon}" alt="${project.title}" />
+              </div>
+              <div>
+                <h3 class="drawer-head-title">${project.subtitle}</h3>
+                <span class="drawer-head-meta">${project.badge} • ${project.status}</span>
+              </div>
+            </div>
+
             <div>
               <div class="drawer-section-title">О проекте</div>
               <p class="drawer-text">${project.description}</p>
