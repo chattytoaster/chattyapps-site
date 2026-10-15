@@ -34,6 +34,7 @@ chattyapps-portfolio/
 
 1. **SecondsYear** (`Android & Мобильные`)
    - Нативное приложение на **Jetpack Compose** + **CameraX** + **Media3** для ежедневной съемки видеохроник (1s–60s) и кинематографичного аппаратного монтажа годовых роликов.
+   - *Страница приложения*: [RuStore (com.chatty.secondsyear)](https://www.rustore.ru/catalog/app/com.chatty.secondsyear).
    - *Исходный код*: приватный (NDA). Доступна кнопка «Посмотреть».
 2. **AntigravityTG** (`Telegram & Системные утилиты`)
    - Удаленный командный центр в Telegram для прямого управления локальным терминалом, консольными процессами, запуска скриптов и тестов на ПК со смартфона.
@@ -43,6 +44,8 @@ chattyapps-portfolio/
    - *Исходный код*: открытый на GitHub → [github.com/chattytoaster/checkrename](https://github.com/chattytoaster/checkrename).
 4. **VOZDUH** (`Telegram MiniApp & Бронирование`)
    - Комплексный сервис онлайн-бронирования домиков и глэмпинга: пошаговый FSM-бот, веб-интерфейс **Telegram MiniApp**, двусторонняя синхронизация с **Google Sheets & Calendar**, система сгораемых бонусов и сертификатов.
+   - *Сайт проекта*: [vozduh.net](https://vozduh.net)
+   - *Telegram-бот*: [@vozduhglampingbot](https://t.me/vozduhglampingbot)
    - *Исходный код*: коммерческий / закрытый. Доступна кнопка «Посмотреть».
 5. **BeautyBot** (`CRM & Онлайн-запись`)
    - Автоматизированный бот для салонов красоты и мастеров с интерактивным календарем свободных окон, выбором услуг, мастеров и личным кабинетом клиента.

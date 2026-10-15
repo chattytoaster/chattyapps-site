@@ -63,13 +63,59 @@ function initProjectsList() {
 
       const githubIconSvg = `<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>`;
 
-      const rowCodeLink = (project.isPublicGithub && project.githubUrl) ? `
-        <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn-view-code" title="Исходный код на GitHub" onclick="event.stopPropagation()">
-          ${githubIconSvg}
-          <span>Код</span>
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-        </a>
-      ` : '';
+      const extraRowLinks = [];
+      if (project.websiteUrl) {
+        extraRowLinks.push(`
+          <a href="${project.websiteUrl}" target="_blank" rel="noopener noreferrer" class="btn-view-code" title="Сайт ${project.websiteUrl}" onclick="event.stopPropagation()">
+            <span>Сайт</span>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        `);
+      }
+      if (project.isPublicGithub && project.githubUrl) {
+        extraRowLinks.push(`
+          <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn-view-code" title="Исходный код на GitHub" onclick="event.stopPropagation()">
+            ${githubIconSvg}
+            <span>Код</span>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        `);
+      }
+
+      const drawerExtraLinks = [];
+      if (project.rustoreUrl) {
+        drawerExtraLinks.push(`
+          <a href="${project.rustoreUrl}" target="_blank" rel="noopener noreferrer" class="drawer-btn-github" title="Страница в RuStore">
+            <span>RuStore</span>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        `);
+      }
+      if (project.websiteUrl) {
+        drawerExtraLinks.push(`
+          <a href="${project.websiteUrl}" target="_blank" rel="noopener noreferrer" class="drawer-btn-github" title="Официальный сайт">
+            <span>Сайт (${project.websiteUrl.replace('https://', '')})</span>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        `);
+      }
+      if (project.botUrl && project.viewUrl !== project.botUrl) {
+        drawerExtraLinks.push(`
+          <a href="${project.botUrl}" target="_blank" rel="noopener noreferrer" class="drawer-btn-github" title="Telegram-бот">
+            <span>Telegram-бот</span>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        `);
+      }
+      if (project.isPublicGithub && project.githubUrl) {
+        drawerExtraLinks.push(`
+          <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="drawer-btn-github">
+            ${githubIconSvg}
+            <span>Исходный код (GitHub)</span>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        `);
+      }
 
       item.innerHTML = `
         <div class="project-row" role="button" tabindex="0" aria-expanded="false">
@@ -93,7 +139,7 @@ function initProjectsList() {
                 <polyline points="7 7 17 7 17 17"></polyline>
               </svg>
             </a>
-            ${rowCodeLink}
+            ${extraRowLinks.join("")}
             <div class="project-expand-icon" title="Подробнее">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="6 9 12 15 18 9"></polyline>
@@ -151,18 +197,14 @@ function initProjectsList() {
                   <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                 </a>
 
-                ${(project.isPublicGithub && project.githubUrl) ? `
-                  <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="drawer-btn-github">
-                    ${githubIconSvg}
-                    <span>Исходный код (GitHub)</span>
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                  </a>
-                ` : `
+                ${drawerExtraLinks.join("")}
+
+                ${!project.isPublicGithub ? `
                   <span class="drawer-nda-badge">
                     <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                     <span>Закрытый исходный код</span>
                   </span>
-                `}
+                ` : ''}
               </div>
 
               <a href="${directUrl}" target="_blank" rel="noopener noreferrer" class="drawer-cta">
