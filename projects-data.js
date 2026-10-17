@@ -147,6 +147,54 @@ const PROJECTS_DATA = [
     contactSubject: "Разработка Telegram-моста к серверу или консольным сервисам"
   },
   {
+    id: "chattywidgets",
+    title: "ChattyWidgets",
+    subtitle: "Нативный движок виджетов для рабочего стола Windows (.NET 8)",
+    badge: "Windows Desktop & .NET 8",
+    category: "Desktop & Утилиты",
+    categoryId: "desktop",
+    year: "2026",
+    status: "Релиз 1.0.0",
+    icon: "assets/chattywidgets-icon.png",
+    heroImage: "assets/chattywidgets-icon.png",
+    imageType: "png",
+    isPublicGithub: true,
+    githubUrl: "https://github.com/chattytoaster/ChattyWidgets",
+    viewUrl: "chattywidgets.html",
+    viewLabel: "Посмотреть",
+    summary: "Высокопроизводительный движок виджетов для рабочего стола Windows на .NET 8 с аппаратным ускорением DirectX/WPF, пакетами .chw с подписью RSA-4096 и 12 нативными виджетами.",
+    description: "ChattyWidgets — легковесная альтернатива Rainmeter нового поколения для Windows 10/11. Обеспечивает 0% нагрузки на CPU в фоновом режиме, закрепление на уровне обоев рабочего стола (слой WorkerW/Progman — не сворачивается при Win + D), сквозной клик (WS_EX_TRANSPARENT), умное прилипание к границам, сохранение пресетов рабочих пространств (.chwp), бегущую строку (Marquee) и гибридный рантайм (XAML + WebView2).",
+    problem: "Классические программы кастомизации рабочего стола перегружают процессор фоновыми скриптами, потребляют сотни мегабайт памяти, сворачиваются при нажатии Win + D и не имеют единого безопасного каталога проверенных виджетов с цифровой подписью.",
+    solution: "Создан нативный модульный движок на .NET 8 с аппаратным рендерингом DirectX/WPF, глубокими хуками Windows API (WorkerW, DWM), каталогом из 12 готовых виджетов (системный и GPU мониторы, плеер, погода, крипта, заметки, Pomodoro, часы, док, календарь, фото, RSS) и защищенным форматом пакетов .chw с проверкой цифровой подписи RSA-4096.",
+    features: [
+      "0% нагрузки на CPU в фоне: аппаратный рендеринг DirectX/WPF и потребление всего ~15–25 МБ RAM на экземпляр виджета.",
+      "Слой «Рабочий стол» (WorkerW / Progman): закрепление под всеми окнами на уровне обоев, виджеты не скрываются по нажатию Win + D.",
+      "Каталог из 12 нативных виджетов: мониторы CPU/RAM/SSD/GPU, медиаплеер с винилом, криптотрекер, Pomodoro-таймер, заметки, погода и др.",
+      "Формат защищенных пакетов .chw: сжатые архивы с криптографической верификацией цифровой подписи RSA-4096 (знак «✦ Официальный»).",
+      "Пресеты рабочего стола (.chwp): моментальное сохранение и переключение раскладок виджетов в 1 клик для работы, отдыха и мониторинга.",
+      "Сквозной клик и умное прилипание: прозрачный пропуск кликов на иконки стола (WS_EX_TRANSPARENT) и snap к сетке (5–40 px).",
+      "Двуязычный интерфейс и темы: мгновенное переключение языка (RU / EN) и темной/светлой темы оформления без перезапуска."
+    ],
+    techStack: [
+      { name: "C# / .NET 8", category: "Core" },
+      { name: "WPF & XAML", category: "UI Engine" },
+      { name: "DirectX Hardware Accel", category: "Rendering" },
+      { name: "Win32 API (User32 / DWM)", category: "OS Integration" },
+      { name: "Microsoft Edge WebView2", category: "Web Runtime" },
+      { name: "RSA-4096 Cryptography", category: "Security" },
+      { name: "Inno Setup", category: "Packaging" }
+    ],
+    architecture: "Многопоточный рантайм на .NET 8 с изолированными окнами виджетов на базе Win32 API хуков (SetParent WorkerW, WS_EX_TOOLWINDOW, WS_EX_TRANSPARENT). Безопасный загрузчик пакетов .chw с верификацией цифровых подписей RSA-4096 и IPC-шина между Хабом и виджетами.",
+    metrics: [
+      { label: "Нагрузка на CPU", value: "0% в фоне" },
+      { label: "Потребление RAM", value: "~15-25 МБ" },
+      { label: "Нативных виджетов", value: "12 из коробки" },
+      { label: "ОС", value: "Windows 10/11" }
+    ],
+    telegramLink: "https://t.me/chtoaster",
+    contactSubject: "Разработка нативных десктопных приложений на .NET 8 и WPF"
+  },
+  {
     id: "checkrename",
     title: "CheckRename",
     subtitle: "Автоматизация распознавания и переименования PDF-счетов",

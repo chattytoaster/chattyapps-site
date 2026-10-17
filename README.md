@@ -14,13 +14,14 @@ chattyapps-site/
 ├── secondsyear.html      # Персональный лендинг SecondsYear (Android)
 ├── yttvaf.html           # Персональный лендинг YouTube TV Mod (Android TV)
 ├── antigravitytg.html    # Персональный лендинг AntigravityTG (CLI & Telegram)
+├── chattywidgets.html    # Персональный лендинг ChattyWidgets (Windows Desktop .NET 8)
 ├── checkrename.html      # Персональный лендинг CheckRename (Windows Desktop OCR)
 ├── vozduh.html           # Персональный лендинг VOZDUH Glamping (MiniApp & Bot)
 ├── beautybot.html        # Персональный лендинг BeautyBot (CRM & Запись)
 ├── chattyapps.html       # Персональный лендинг ChattyApps Studio Bot & API
 ├── styles.css            # Минималистичная дизайн-система и адаптивные стили
 ├── script.js             # Контроллер тем, динамических счетчиков и аккордеонов
-├── projects-data.js      # Структурированные метаданные 7 проектов
+├── projects-data.js      # Структурированные метаданные 8 проектов
 └── assets/               # Векторный логотип, иконки и скриншоты проектов
 ```
 
@@ -28,7 +29,7 @@ chattyapps-site/
 
 ## 🌟 Представленные проекты в портфолио
 
-В портфолио представлены все 7 ключевых разработок с выделенными лендингами:
+В портфолио представлены все 8 ключевых разработок с выделенными лендингами:
 
 1. **SecondsYear** (`Android & Мобильные`)
    - Нативное приложение на **Kotlin / Jetpack Compose** + **CameraX** + **Media3** для ежедневной съемки видеохроник (1s–60s) и кинематографичного аппаратного монтажа годовых роликов без водяных знаков.
@@ -45,23 +46,28 @@ chattyapps-site/
    - *Репозиторий на GitHub*: [github.com/chattytoaster/AntigravityTG](https://github.com/chattytoaster/AntigravityTG).
    - *Лендинг*: `antigravitytg.html` (кнопка «Открыть» → GitHub).
 
-4. **CheckRename (docrename)** (`Desktop Windows & Автоматизация`)
+4. **ChattyWidgets** (`Windows Desktop & .NET 8`)
+   - Высокопроизводительный движок виджетов для рабочего стола Windows на **C# / .NET 8** с аппаратным ускорением **DirectX/WPF**, интеграцией со слоем обоев **WorkerW / Progman** (0% CPU в фоне, не сворачивается при `Win + D`), защищенным форматом пакетов `.chw` с цифровой подписью **RSA-4096**, пресетами рабочих пространств `.chwp`, сквозным кликом (`WS_EX_TRANSPARENT`) и каталогом из 12 нативных виджетов.
+   - *Репозиторий на GitHub*: [github.com/chattytoaster/ChattyWidgets](https://github.com/chattytoaster/ChattyWidgets).
+   - *Лендинг*: `chattywidgets.html` (кнопка «Открыть» → GitHub).
+
+5. **CheckRename (docrename)** (`Desktop Windows & Автоматизация`)
    - Автономная Windows-утилита на **PyQt6** с двухслойным распознаванием (PDF/PyMuPDF + **Tesseract OCR**) для автоматического пакетного переименования счетов и актов без отправки файлов в интернет.
    - *Репозиторий на GitHub*: [github.com/chattytoaster/checkrename](https://github.com/chattytoaster/checkrename).
    - *Лендинг*: `checkrename.html` (кнопка «Открыть» → GitHub).
 
-5. **VOZDUH** (`Telegram MiniApp & Бронирование`)
+6. **VOZDUH** (`Telegram MiniApp & Бронирование`)
    - Цифровая экосистема онлайн-бронирования глэмпинга: пошаговый FSM-бот на Aiogram 3, веб-интерфейс **Telegram MiniApp**, двусторонняя синхронизация с **Google Sheets & Calendar** в реальном времени, предотвращающая овербукинг.
    - *Сайт проекта*: [vozduh.net](https://vozduh.net)
    - *Telegram-бот*: [@vozduhglampingbot](https://t.me/vozduhglampingbot)
    - *Лендинг*: `vozduh.html` (кнопка «Открыть» → Telegram-бот, кнопка «Сайт»).
 
-6. **BeautyBot** (`CRM & Онлайн-запись`)
+7. **BeautyBot** (`CRM & Онлайн-запись`)
    - Автоматизированный бот для салонов красоты и частных мастеров с интерактивным календарем свободных слотов, расчетом времени процедур и напоминаниями для снижения неявок.
    - *Статус*: Сейчас недоступен (кнопка деактивирована).
    - *Лендинг*: `beautybot.html` (кнопка «Открыть» неактивна с подписью «сейчас недоступно»).
 
-7. **ChattyApps Studio Bot & License Server** (`Экосистема & REST API`)
+8. **ChattyApps Studio Bot & License Server** (`Экосистема & REST API`)
    - Флагманский бот-витрина студии с калькулятором брифа и встроенным **HTTP REST API сервером** для генерации и верификации лицензий мобильного приложения SecondsYear.
    - *Telegram-бот*: [@chattyappsbot](https://t.me/chattyappsbot)
    - *Лендинг*: `chattyapps.html` (кнопка «Открыть» → Telegram-бот).

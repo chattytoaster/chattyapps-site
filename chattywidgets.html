@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChattyWidgets — Нативный движок виджетов для рабочего стола Windows (.NET 8) — ChattyApps</title>
+  <meta name="description" content="Легковесный движок виджетов рабочего стола Windows 10/11 на .NET 8 с аппаратным ускорением DirectX, пакетами .chw с подписью RSA-4096 и каталогом из 12 нативных виджетов." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/chattywidgets-icon.png" type="image/png" />
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <header class="landing-nav-bar">
+      <div class="landing-nav-left">
+        <a href="index.html" class="landing-back-link" title="Вернуться в портфолио">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>ChattyApps Studio</span>
+        </a>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://github.com/chattytoaster/ChattyWidgets" target="_blank" rel="noopener noreferrer" class="link-arrow" style="font-size: 0.84rem;">
+          <span>GitHub</span>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+
+        <button id="theme-toggle" class="theme-btn" aria-label="Сменить тему">
+          <svg class="sun-icon" viewBox="0 0 24 24">
+            <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24">
+            <path d="M12.3 2a10 10 0 0 0-1.9 20 10 10 0 0 0 9.7-7.6 1 1 0 0 0-1.2-1.2 8 8 0 1 1-7.8-12.4 1 1 0 0 0 1.2-1.2A10 10 0 0 0 12.3 2z"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="landing-hero">
+      <div class="landing-head">
+        <img src="assets/chattywidgets-icon.png" alt="ChattyWidgets" class="landing-app-icon" />
+        <div class="landing-title-wrap">
+          <div class="landing-meta-tags">
+            <span class="project-tag">Windows Desktop</span>
+            <span class="project-tag">.NET 8 & WPF</span>
+            <span class="project-tag">DirectX Accel</span>
+            <span class="project-tag">Open Source</span>
+            <span class="project-tag">2026</span>
+          </div>
+          <h1 class="landing-title">ChattyWidgets</h1>
+        </div>
+      </div>
+
+      <p class="landing-lead">
+        Высокопроизводительный нативный движок виджетов рабочего стола для Windows 10 и 11 на платформе .NET 8. Работает с аппаратным ускорением DirectX, закрепляется на уровне обоев рабочего стола (слой WorkerW — не сворачивается по нажатию Win + D), потребляет 0% CPU в фоне, поддерживает безопасные подписанные пакеты виджетов (.chw) с верификацией RSA-4096 и включает 12 готовых нативных виджетов из коробки.
+      </p>
+
+      <!-- Primary Action Buttons -->
+      <div class="landing-actions">
+        <a href="https://github.com/chattytoaster/ChattyWidgets" target="_blank" rel="noopener noreferrer" class="btn-primary-open">
+          <span>Открыть</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+
+        <a href="https://github.com/chattytoaster/ChattyWidgets" target="_blank" rel="noopener noreferrer" class="btn-secondary-action">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>Репозиторий на GitHub</span>
+        </a>
+
+        <a href="index.html" class="btn-secondary-action">
+          <span>← В портфолио</span>
+        </a>
+      </div>
+
+      <!-- Quick Metrics -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <span class="metric-val">0% CPU</span>
+          <span class="metric-lbl">В фоновом режиме</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-val">~15–25 МБ</span>
+          <span class="metric-lbl">RAM на виджет</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-val">12 виджетов</span>
+          <span class="metric-lbl">Встроенный каталог</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-val">RSA-4096</span>
+          <span class="metric-lbl">Цифровая подпись пакетов</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Ключевые возможности</h2>
+      </div>
+
+      <div>
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>🪟 Интеграция со слоем «Рабочий стол» (WorkerW / Progman)</span>
+          </div>
+          <p class="landing-feature-desc">
+            Виджеты внедряются напрямую в нативный слой обоев Windows через Win32 API <code>SetParent</code>. В отличие от стандартных плавающих утилит, виджеты ChattyWidgets не перекрывают рабочие окна и <strong>не сворачиваются</strong> при нажатии сочетания <span class="kbd-tag">Win + D</span> («Свернуть все окна») или кнопки «Показать рабочий стол».
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>⚡ 0% нагрузки на CPU и аппаратный рендеринг</span>
+          </div>
+          <p class="landing-feature-desc">
+            Графический конвейер на базе WPF и DirectX обеспечивает плавные 60 fps анимации только в момент взаимодействия, полностью замораживая лишние отрисовки в фоновом режиме. Расход оперативной памяти составляет всего ~15–25 МБ на экземпляр, что делает движок идеальным как для мощных рабочих станций, так и для автономных ноутбуков.
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>📦 Формат пакетов .chw и криптографическая безопасность</span>
+          </div>
+          <p class="landing-feature-desc">
+            Виджеты упаковываются в изолированные архивы <code>.chw</code>, содержащие манифест, XAML-разметку или веб-код и ресурсы. Движок проверяет цифровую подпись каждого пакета с использованием асимметричного шифрования <strong>RSA-4096</strong>: только доверенные виджеты получают статус «✦ Официальный», предотвращая запуск вредоносного кода.
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>🖥 Пресеты рабочих пространств (.chwp)</span>
+          </div>
+          <p class="landing-feature-desc">
+            Сохраняйте и переключайте полноценные конфигурации рабочего стола в один клик. Создавайте специализированные пресеты под разные сценарии: «Рабочий мониторинг» (CPU, RAM, GPU, To-Do), «Отдых» (медиаплеер, погода, фото-рамка) или «Минимализм» (часы и криптотрекер).
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>🎯 Сквозной клик и умное прилипание к сетке</span>
+          </div>
+          <p class="landing-feature-desc">
+            Режим сквозного клика (<code>WS_EX_TRANSPARENT</code>) позволяет кликать сквозь виджет прямо на лежащие под ним иконки рабочего стола. Умное магнитное прилипание (Snap) с шагом от 5 до 40 пикселей автоматически выравнивает виджеты относительно границ монитора и соседних панелей.
+          </p>
+        </div>
+
+        <div class="landing-feature-item">
+          <div class="landing-feature-title">
+            <span>🌐 Двуязычный интерфейс и темизация на лету</span>
+          </div>
+          <p class="landing-feature-desc">
+            Полная локализация на русский и английский языки (RU / EN) с моментальным переключением без перезапуска программы. Поддержка глубокой темной и элегантной светлой тем оформления в стиле нативного Fluent Design.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalog of 12 Widgets -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Каталог 12 нативных виджетов</h2>
+      </div>
+
+      <div class="landing-table-wrap">
+        <table class="landing-table">
+          <thead>
+            <tr>
+              <th style="width: 28%;">Виджет</th>
+              <th style="width: 22%;">Категория</th>
+              <th>Описание и возможности</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Системный монитор</strong></td>
+              <td><span class="project-tag">Hardware</span></td>
+              <td>Загрузка CPU, использование RAM, свободное место на SSD/HDD в реальном времени с круговыми диаграммами.</td>
+            </tr>
+            <tr>
+              <td><strong>GPU Монитор</strong></td>
+              <td><span class="project-tag">Hardware</span></td>
+              <td>Мониторинг видеокарт NVIDIA, AMD и Intel: температура чипа, тактовая частота, занятая VRAM и процент утилизации.</td>
+            </tr>
+            <tr>
+              <td><strong>Медиаплеер</strong></td>
+              <td><span class="project-tag">Media</span></td>
+              <td>Управление Windows Media (Spotify, Яндекс.Музыка, браузер), анимация вращающегося винила и бегущая строка названия (Marquee).</td>
+            </tr>
+            <tr>
+              <td><strong>Погода</strong></td>
+              <td><span class="project-tag">Information</span></td>
+              <td>Прогноз погоды на 7 дней по данным Open-Meteo без необходимости ввода платных API-ключей, почасовой график и влажность.</td>
+            </tr>
+            <tr>
+              <td><strong>Криптотрекер</strong></td>
+              <td><span class="project-tag">Finance</span></td>
+              <td>Котировки Bitcoin, Ethereum, Solana, TON и других монет в реальном времени с графиками 24h динамики и выбором валюты (USD/RUB/EUR).</td>
+            </tr>
+            <tr>
+              <td><strong>Заметки &amp; Стикеры</strong></td>
+              <td><span class="project-tag">Productivity</span></td>
+              <td>Быстрые стикеры для заметок и списков задач прямо на рабочем столе с мгновенным автосохранением и цветной маркировкой.</td>
+            </tr>
+            <tr>
+              <td><strong>Pomodoro-таймер</strong></td>
+              <td><span class="project-tag">Productivity</span></td>
+              <td>Классический таймер концентрации (25 минут работы / 5 минут отдыха) со счетчиком завершенных циклов и деликатными звуками.</td>
+            </tr>
+            <tr>
+              <td><strong>Часы и дата</strong></td>
+              <td><span class="project-tag">Time</span></td>
+              <td>Элегантные минималистичные цифровые и стрелочные аналоговые циферблаты с секундомером и мировым временем.</td>
+            </tr>
+            <tr>
+              <td><strong>Док-панель (App Dock)</strong></td>
+              <td><span class="project-tag">Launcher</span></td>
+              <td>Панель быстрого запуска избранных программ, игр, веб-сайтов и системных папок с поддержкой Drag-and-Drop.</td>
+            </tr>
+            <tr>
+              <td><strong>Календарь</strong></td>
+              <td><span class="project-tag">Time</span></td>
+              <td>Компактная сетка текущего месяца с подсветкой сегодняшнего дня, выходных и быстрым переключением по месяцам.</td>
+            </tr>
+            <tr>
+              <td><strong>Фото-рамка</strong></td>
+              <td><span class="project-tag">Personalization</span></td>
+              <td>Слайдшоу из выбранной папки с фотографиями или артами, настраиваемым интервалом смены кадров и рамками.</td>
+            </tr>
+            <tr>
+              <td><strong>RSS-ридер</strong></td>
+              <td><span class="project-tag">News</span></td>
+              <td>Лента свежих новостей из любых RSS/Atom-источников с автообновлением и быстрым переходом к чтению статьи.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Hotkeys Table -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Горячие клавиши и управление</h2>
+      </div>
+
+      <div class="landing-table-wrap">
+        <table class="landing-table">
+          <thead>
+            <tr>
+              <th style="width: 32%;">Сочетание клавиш</th>
+              <th>Действие</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="kbd-tag">Win + Alt + W</span></td>
+              <td>Скрыть или показать все активные виджеты на рабочем столе</td>
+            </tr>
+            <tr>
+              <td><span class="kbd-tag">Win + Alt + P</span></td>
+              <td>Режим «Peek» — временно поднять все виджеты поверх всех открытых окон приложений</td>
+            </tr>
+            <tr>
+              <td><span class="kbd-tag">Win + Alt + H</span></td>
+              <td>Открыть главное окно управления (ChattyWidgets Hub)</td>
+            </tr>
+            <tr>
+              <td><span class="kbd-tag">ПКМ по виджету</span></td>
+              <td>Контекстное меню: закрепление, сквозной клик, выбор слоя, уровень прозрачности и настройки</td>
+            </tr>
+            <tr>
+              <td><span class="kbd-tag">Shift + Перетаскивание</span></td>
+              <td>Свободное перемещение с временным отключением прилипания к сетке (Snap)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Architecture & Stack -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Архитектура и стек</h2>
+      </div>
+
+      <div class="contact-box" style="margin-bottom: 24px;">
+        <p class="drawer-text" style="margin-bottom: 14px;">
+          Архитектура ChattyWidgets построена на высокопроизводительном рантайме .NET 8. Каждый активный виджет представляет собой изолированное окно WPF со специализированными стилями Win32 (<code>WS_EX_TOOLWINDOW</code>, <code>WS_EX_NOACTIVATE</code>, <code>WS_EX_TRANSPARENT</code>). Модульная система пакетов <code>.chw</code> изолирует ресурсы виджетов, а криптографический сервис верифицирует RSA-4096 подписи. Для веб-виджетов задействован встроенный движок WebView2 с аппаратным рендерингом.
+        </p>
+
+        <div class="drawer-stack">
+          <span class="stack-pill">C# / .NET 8</span>
+          <span class="stack-pill">WPF & XAML</span>
+          <span class="stack-pill">DirectX Hardware Accel</span>
+          <span class="stack-pill">Win32 API (User32 / DWM)</span>
+          <span class="stack-pill">Microsoft Edge WebView2</span>
+          <span class="stack-pill">RSA-4096 Cryptography</span>
+          <span class="stack-pill">System Tray Daemon</span>
+          <span class="stack-pill">Inno Setup</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Start -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Быстрый запуск</h2>
+      </div>
+
+      <div class="steps-list">
+        <div class="step-card">
+          <span class="step-num">1</span>
+          <div class="step-content">
+            <span class="step-title">Скачайте релиз ChattyWidgets</span>
+            <span class="step-desc">Перейдите в репозиторий проекта на GitHub и скачайте актуальный установщик или портативную версию из раздела Releases.</span>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <span class="step-num">2</span>
+          <div class="step-content">
+            <span class="step-title">Запустите приложение</span>
+            <span class="step-desc">ChattyWidgets свернется в системный трей и откроет Hub управления со списком установленных виджетов и пресетов.</span>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <span class="step-num">3</span>
+          <div class="step-content">
+            <span class="step-title">Настройте рабочий стол</span>
+            <span class="step-desc">Включите нужные виджеты переключателями, перетащите их в удобные места экрана, настройте прозрачность или активируйте сквозной клик.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons Bottom -->
+      <div class="landing-actions" style="margin-top: 32px;">
+        <a href="https://github.com/chattytoaster/ChattyWidgets" target="_blank" rel="noopener noreferrer" class="btn-primary-open">
+          <span>Открыть на GitHub</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+
+        <a href="index.html" class="btn-secondary-action">
+          <span>← Назад в портфолио</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div>
+        <span>© 2026 ChattyApps. Все права защищены.</span>
+      </div>
+      <div>
+        <a href="https://t.me/chtoaster" target="_blank" rel="noopener noreferrer" class="link-arrow">
+          <span>Связаться: @chtoaster</span>
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
