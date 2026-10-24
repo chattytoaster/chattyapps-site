@@ -32,9 +32,10 @@ chattyapps-site/
 В портфолио представлены все 8 ключевых разработок с выделенными лендингами:
 
 1. **SecondsYear** (`Android & Мобильные`)
-   - Нативное приложение на **Kotlin / Jetpack Compose** + **CameraX** + **Media3** для ежедневной съемки видеохроник (1s–60s) и кинематографичного аппаратного монтажа годовых роликов без водяных знаков.
+   - Нативное приложение на **Kotlin / Jetpack Compose** + **CameraX** + **Media3** для ежедневной съемки видеохроник (1s–60s) и кинематографичного аппаратного монтажа годовых роликов с сохранением оригинального качества.
+   - *Прямое скачивание APK*: [SecondsYear-2.0.0.apk](https://github.com/chattytoaster/releases/releases/download/sy-2.0.0/SecondsYear-2.0.0.apk).
    - *Страница в RuStore*: [RuStore (com.chatty.secondsyear)](https://www.rustore.ru/catalog/app/com.chatty.secondsyear).
-   - *Лендинг*: `secondsyear.html` (кнопка «Открыть» → RuStore).
+   - *Лендинг*: `secondsyear.html` (кнопки «Скачать APK», «Страница в RuStore»).
 
 2. **YouTube TV Mod (com.chatty.yttvaf)** (`Android & TV`)
    - Модифицированный клиент YouTube для Android TV / Smart TV на движке Chromium/Cobalt со встроенным локальным SOCKS5-петлевым туннелем (Local loopback), Web-интерфейсом управления (`:8888`), нативным меню для пульта, **SponsorBlock** (8 категорий) и **AdBlock**.
